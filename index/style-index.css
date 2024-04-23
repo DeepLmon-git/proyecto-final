@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Oxygen:wght@300;400;700&family=Ropa+Sans:ital@0;1&display=swap');
+:root{
+  -main-color:#020517;
+}
 body{
     font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -33,6 +36,24 @@ h1{
   letter-spacing: 1px;
   margin-top: 1px;
 }
+table{
+  width: 70%;
+  max-width: 70%;
+  box-sizing: border-box;
+  
+  border-collapse: collapse;
+}
+tr{
+  border-bottom: 1px solid #fff;
+  height: 87px;
+}
+td{
+  border: 1px solid #00ffea4b;
+  width: 28%;
+}
+.text-content{
+  width: 44%;
+}
 .botonPremium{
   text-decoration: none;
   color: white;
@@ -44,13 +65,16 @@ h1{
 background: linear-gradient(45deg, rgba(251,62,232,1) 0%, rgba(141,20,236,1) 100%);
 }
 .plans{
+    display: flex;
     box-sizing: border-box;
     position: relative;
     width: 100%;
-    height: 200vh;
+    height:  141.9978vh;
     background-color: #020517;
     margin-top: 0;
     padding: 5%;
+    flex-direction: column;
+    align-items: center;
 }
 footer{
   height: 21.05vh;
