@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f0f0f0;
+          animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        .container {
+          width: 300px;
+          margin: 50px auto;
+          padding: 20px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          animation: slideInDown 1s;
+        }
+        @keyframes slideInDown {
+          0% {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+        h1 {
+          text-align: center;
+          margin-top: 0;
+          animation: fadeIn 1s;
+        }
+        label {
+          display: block;
+          margin-top: 20px;
+          font-size: 16px;
+          animation: fadeIn 1s;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"] {
+          width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          box-sizing: border-box;
+          animation: fadeIn 1s;
+        }
+        button[type="submit"] {
+          width: 100%;
+          padding: 10px;
+          margin-top: 20px;
+          background-color: #333;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          animation: fadeIn 1s;
+        }
+        button[type="submit"]:hover {
+          background-color: #555;
+        }
+        a {
+          display: block;
+          margin-top: 10px;
+          font-size: 14px;
+          color: #333;
+          text-decoration: none;
+          animation: fadeIn 1s;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+        .input-container {
+          position: relative;
+          animation: fadeIn 1s;
+        }
+        .icon {
+          position: absolute;
+          left: 10px;
+          top: 35px;
+          font-size: 20px;
+          color: #333;
+          animation: fadeIn 1s;
+        }
+        .input-field {
+          padding-left: 40px;
+          animation: fadeIn 1s;
+        }
+        .checkbox-container {
+          margin-top: 10px;
+          animation: fadeIn 1s;
+        }
+        .checkbox-label {
+          display: inline-block;
+          margin-right: 10px;
+          animation: fadeIn 1s;
+        }
+        .checkbox-input {
+          display: inline-block;
+          margin-right: 5px;
+          animation: fadeIn 1s;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Regístrate</h1>
+        <form method="post" action="/register">
+            <div class="input-container">
+              <i class="icon fas fa-user"></i>
+              <input type="text" id="username" name="username" required class="input-field" placeholder="Nombre de usuario" />
+            </div>
+            <div class="input-container">
+              <i class="icon fas fa-envelope"></i>
+              <input type="email" id="email" name="email" required class="input-field" placeholder="Correo electrónico" />
+            </div>
+            <div class="input-container">
+              <i class="icon fas fa-lock"></i>
+              <input type="password" id="password" name="password" required class="input-field" placeholder="Contraseña" />
+            </div>
+            <div class="input-container">
+              <i class="icon fas fa-lock"></i>
+              <input type="password" id="confirm-password" name="confirm-password" required class="input-field" placeholder="Confirmar contraseña" />
+            </div>
+            <div class="input-container">
+              <i class="icon fas fa-phone"></i>
+              <input type="tel" id="phone" name="phone" required class="input-field" placeholder="Número de teléfono" />
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="terms" name="terms" required class="checkbox-input" />
+              <label for="terms" class="checkbox-label">Acepto los términos y condiciones de usuario</label>
+            </div>
+            <button type="submit">Registrarse</button>
+          </form>
