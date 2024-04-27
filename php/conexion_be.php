@@ -1,6 +1,7 @@
 <?php   
 
-    $conexion = mysqli_connect("localhost", "root", "", "login_register_db");
+    $conexion = new mysqli("localhost", "root", "", "login_register_db");
+    $conexion->set_charset("utf8");
     
     if($conexion){
         echo 'conectado'
