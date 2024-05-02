@@ -1,9 +1,11 @@
 import express, { json } from "express";
+import cookieParser from "cookie-parser";
 //fix para __dirname
 import path from 'path';
 import {fileURLToPath} from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import {methods as authentication} from "./controllers/authentication.controllers.js";
+import {methods as authorization} from "./middlewares/authorization.js";
 const app=express();
 app.set("port",4000);
 app.listen(app.get("port"));
@@ -12,10 +14,11 @@ console.log("servidor corriendo ", app.get("port"));
 //config
 app.use(express.static(__dirname + "/public"));
 app.use(express.json());
+app.use(cookieParser());
 
-app.get("/",(req,res)=> res.sendFile(__dirname+"/index.html"));
-app.get("/login",(req,res)=> res.sendFile(__dirname+"/pags/login.html"));
-app.get("/register",(req,res)=> res.sendFile(__dirname+"/pags/register.html"));
-app.get("/admin",(req,res)=> res.sendFile(__dirname+"/pags/admin/admin.html"));
+app.get("/",authorization.soloPublico,(req,res)=> res.sendFile(__dirname+"/index.html"));
+app.get("/login",authorization.soloPublico,(req,res)=> res.sendFile(__dirname+"/pags/login.html"));
+app.get("/register",authorization.soloPublico,(req,res)=> res.sendFile(__dirname+"/pags/register.html"));
+app.get("/admin",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname+"/pags/admin/admin.html"));
 app.post("/api/register",authentication.register);
 app.post("/api/login",authentication.login);
