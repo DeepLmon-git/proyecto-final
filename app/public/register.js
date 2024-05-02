@@ -12,6 +12,10 @@ document.getElementById("register-form").addEventListener("submit",async (e)=>{
         password: e.target.children.password.value,
         tel: e.target.children.tel.value
     })
-
 })
+    if(!res.ok) return;
+    const resJson = await res.json();
+    if(resJson.redirect){
+        window.location.href = resJson.redirect;
+    }
 })
