@@ -4,20 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iniciar sesión</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login-styles.css">
   <script src="login.js" defer></script>
 </head>
 <body>
   <main>
-    <div class="form-container">
+    <div class="form-container container">
       <h1>Iniciar sesión</h1>
-      <p>Ingresá tus credenciales para acceder al área de administración.</p>
+      <p>Ingrese su cuenta</p>
       <form id="login-form">
         <label for="user" class="sr-only">User</label>
-        <input type="email" name="email" id="email" placeholder="Correo Electronico">
+        <input class="input" type="email" name="email" id="email" placeholder="Correo Electronico">
         <label for="password" class="sr-only">Password</label>
-        <input type="password" name="password" id="password" placeholder="Contraseña">
-        <button type="submit">Iniciar sesión</button>
+        <input class="input" type="password" name="password" id="password" placeholder="Contraseña">
+        <div class="containerbtn">
+          <div class="center">
+            <button class="btn" type="submit">
+              <svg width="300px" height="60px" viewBox="0 0 300 60" class="border">
+                <polyline points="299,1 299,59 1,59 1,1 299,1" class="bg-line" />
+                <polyline points="299,1 299,59 1,59 1,1 299,1" class="hl-line" />
+              </svg>
+              <span><b>Iniciar sesion</b></span>
+            </button>
+          </div>
+        </div>
         <p class="error escondido">Error al iniciar sesión</p>
       </form>
       <p>¿Todavía no tenés una cuenta? - <a href="/register">Registrate</a></p>
