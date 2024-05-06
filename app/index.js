@@ -20,6 +20,6 @@ app.get("/",authorization.soloPublico,(req,res)=> res.sendFile(__dirname+"/index
 app.get("/login",authorization.soloPublico,(req,res)=> res.sendFile(__dirname+"/pags/login.html"));
 app.get("/register",authorization.soloPublico,(req,res)=> res.sendFile(__dirname+"/pags/register.html"));
 app.get("/admin",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname+"/pags/admin/admin.html"));
-app.get("/home",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname+"/pags/admin/Principal.html"));
+app.get("/home",(req,res)=> res.sendFile(__dirname+"/pags/admin/Principal.html"));
 app.post("/api/register",authentication.register);
 app.post("/api/login",authentication.login);
