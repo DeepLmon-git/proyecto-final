@@ -9,6 +9,11 @@
     --other-color3:#c6f9fd;
     --nav-color:#aeaeae;
 }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
     background-color: var(--other-color1);
     font-family: "Inter", sans-serif;
@@ -17,9 +22,15 @@ body{
     padding: 0;
     margin: 0;
 }
+body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+  }
+/*header*/
 .header{
     background-color: var(--nav-color);
-    width: 30px;
+    width: 0;
     height: 100vh;
     pointer-events: none;
     position: fixed;
@@ -32,11 +43,11 @@ body{
     transition: 500ms ease-in-out;
 }
 .visible{
-    width: 24%;
+    width: 350px;
     pointer-events: auto;
 }
 
-/*header*/
+/*nav*/
 .nav{
     opacity: 0;
     width: 0;
@@ -57,6 +68,7 @@ body{
 }
 .header li{
     margin:2cap 0;
+    box-sizing: content-box;
     
 }
 .header .a{
@@ -82,18 +94,113 @@ body{
     background-color: transparent;
     position: fixed;
     z-index: 20;
-    width: 30px;
+    width: 40px;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1cap;
+
+    box-sizing: content-box;
 }
+
 .visible2{
-    width: 288px;
+    width: 260px;
+    padding: 2cap;
+    margin: 0 5px;
     opacity: 1;
     transition: 500ms ease-in-out;
 }
 /*flecha*/
 .flecha{
-    width: 24px;
+width: 100%;
+transition: 250ms ease-in-out;
 }
 .flechasvg{
     width: 100%;
+    height: 100%;
+    
 }
+.flechaD{
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 250ms ease-in-out;
+}
+.efectoShadow{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: -1;
+    transition: all 200ms ease-out;
+}
+.efectoShadow2{
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    opacity: .2;
+}
+/*carrousel*/
+.slider-box{
+    
+    box-sizing: border-box;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+
+}
+.slider-box ul{
+    list-style: none;
+    
+    display: flex;
+    justify-content: none;
+    padding: 0;
+    margin: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out ;
+}
+.slider-box li{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    
+}
+.texto{
+    position: absolute;
+    text-align: center;
+    padding: 0 250px;
+    top: 250px;
+    color: var(--text-color);
+
+}
+.texto h2{
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+.slider-box img{
+    position: absolute;
+    top:0px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+@keyframes slide{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+
+}
+
