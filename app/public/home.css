@@ -114,7 +114,11 @@ body::-webkit-scrollbar {
 /*flecha*/
 .flecha{
 width: 100%;
-transition: 250ms ease-in-out;
+
+transition: all 250ms ease-in;
+}
+.flechaanimation{
+    animation: movement 1100ms infinite alternate ease-in-out ;
 }
 .flechasvg{
     width: 100%;
@@ -122,8 +126,7 @@ transition: 250ms ease-in-out;
     
 }
 .flechaD{
-    transform: translateX(-100px);
-    opacity: 0;
+    animation: movement2 250ms forwards  ease-in-out ;
     transition: 250ms ease-in-out;
 }
 .efectoShadow{
@@ -139,15 +142,33 @@ transition: 250ms ease-in-out;
     z-index: 1;
     width: 100vw;
     height: 100vh;
-    background-color: #000000;
-    opacity: .2;
+    background-color: #000;
+    opacity: .3;
+}
+@keyframes movement{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(15px);
+    }
+}
+@keyframes movement2{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
 }
 /*carrousel*/
 .slider-box{
     
     box-sizing: border-box;
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     overflow: hidden;
 
 }
@@ -171,8 +192,8 @@ transition: 250ms ease-in-out;
 }
 .texto{
     position: absolute;
-    text-align: center;
-    padding: 0 250px;
+    text-align: left;
+    padding: 80px 0 0 250px;
     top: 250px;
     color: var(--text-color);
 
@@ -203,4 +224,5 @@ transition: 250ms ease-in-out;
     100%{margin-left: -300%;}
 
 }
+
 

@@ -8,6 +8,7 @@ function hover(){
     header.classList.add('visible');
     nav.classList.add("visible2");
     flecha.classList.add("flechaD");
+    flecha.classList.remove("flechaanimation");
     shadow.classList.add("efectoShadow2");
     
 }
@@ -19,5 +20,6 @@ function disapear(){
     header.classList.remove('visible');
     nav.classList.remove("visible2");
     flecha.classList.remove("flechaD");
+    flecha.classList.add("flechaanimation");
     shadow.classList.remove("efectoShadow2");
 }
