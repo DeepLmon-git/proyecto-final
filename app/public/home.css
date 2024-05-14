@@ -224,5 +224,28 @@ transition: all 250ms ease-in;
     100%{margin-left: -300%;}
 
 }
+.slider-horizontal{
 
+    width: 80%;
+    height: 500px;
+}
+.slider-horizontal ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
+}
+.slider-horizontal li {
+    width: 30%;
+}
+.slider-horizontal a {
+    width: 100%;
+
+}
+.slider-horizontal .img-item-slider{
+    width: 100%;
+}
+main{
+    width: 100%;
+}
 
