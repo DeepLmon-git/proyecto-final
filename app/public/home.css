@@ -224,7 +224,7 @@ transition: all 250ms ease-in;
     100%{margin-left: -300%;}
 
 }
-.slider-horizontal{
+/*.slider-horizontal{
 
     width: 80%;
     height: 500px;
@@ -247,5 +247,6 @@ transition: all 250ms ease-in;
 }
 main{
     width: 100%;
-}
+}*/
+
 
