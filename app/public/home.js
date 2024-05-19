@@ -273,6 +273,7 @@ const trigger = document.getElementById('trigger');
 
 	}
 	function disapear() {
+		const listaUsuario= document.querySelector('.userUl');
 		var header = document.getElementById('header');
 		var nav = document.getElementById('nav');
 		var flecha = document.getElementById('flecha');
@@ -282,4 +283,5 @@ const trigger = document.getElementById('trigger');
 		flecha.classList.remove("flechaD");
 		flecha.classList.add("flechaanimation");
 		shadow.classList.remove("efectoShadow2");
+		listaUsuario.classList.remove('desplegado')
 	}
