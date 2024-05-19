@@ -11,6 +11,21 @@ function disableButtons(state){
         btns[i].disabled = !!state;    
     }
 }
+
+	/*-------------------Sing Out--------------------*/ 
+
+	document.getElementById("userBtn").addEventListener("click",()=>{
+		document.cookie ='jwt=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+		document.location.href = "/"
+	  })
+
+	const botonUsuario= document.querySelector('.user');
+	const listaUsuario= document.querySelector('.userUl');
+	botonUsuario.addEventListener('click',()=>{
+		listaUsuario.classList.toggle('desplegado')
+	})
+	
+ 
 	/* ---- ----- ----- Carousel 1 ----- ----- ----- */
 	const fila = document.querySelector('.contenedor-carrusel');
 	const peliculas = document.querySelectorAll('.pelicula');
