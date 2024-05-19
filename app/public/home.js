@@ -1,5 +1,16 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-	
+	var btns = document.getElementsByTagName('button');
+for(var i=0;i<btns.length;i++){
+    btns[i].addEventListener('click', function(){
+        disableButtons(true);
+        setTimeout(function(){disableButtons(false);}, 600);
+    });    
+}
+function disableButtons(state){
+    for(var i=0;i<btns.length;i++){
+        btns[i].disabled = !!state;    
+    }
+}
 	/* ---- ----- ----- Carousel 1 ----- ----- ----- */
 	const fila = document.querySelector('.contenedor-carrusel');
 	const peliculas = document.querySelectorAll('.pelicula');
@@ -44,6 +55,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 	// ? Event listener para la flecha derecha
 		flechaDerecha.addEventListener('click', function () {
 			fila.scrollLeft += fila.offsetWidth;
+		
 	
 			const indicadorActivo = document.querySelector('.indicadores .activo');
 			if(indicadorActivo.nextSibling){
@@ -74,7 +86,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 	});
 	flechaIzquierda2.addEventListener('click', ()=> {
 		fila2.scrollLeft -= fila2.offsetWidth;
-		const indicadorActivo = document.querySelector('.indicadores3 .activo');
+		const indicadorActivo = document.querySelector('.indicadores2 .activo');
 		if(indicadorActivo.previousSibling){
 			indicadorActivo.previousSibling.classList.add('activo');
 			indicadorActivo.classList.remove('activo')
