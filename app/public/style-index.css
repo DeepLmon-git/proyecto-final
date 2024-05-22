@@ -104,7 +104,8 @@ background: linear-gradient(45deg, rgba(251,62,232,1) 0%, rgba(141,20,236,1) 100
 
 /**?---- ----- ----- foother ----- ----- -----*/
 
-footer {height: 21.05vh;
+footer {
+  height: 210.5px;
   background-color: #21242e;
   display: flex;
   flex-direction: column;

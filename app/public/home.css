@@ -470,7 +470,8 @@ transition: all 250ms ease-in;
 
 /**?---- ----- ----- foother ----- ----- -----*/
 
-footer {height: 21.05vh;
+footer {
+    height: 210.5px;
     background-color: #21242e;
     display: flex;
     flex-direction: column;
