@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import {methods as authentication} from "./controllers/authentication.controllers.js";
 import {methods as authorization} from "./middlewares/authorization.js";
 const app=express();
-app.set("port",4000);
+app.set("port", process.env.PORT || 4000);
 app.listen(app.get("port"));
 
 //config
