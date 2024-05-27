@@ -7,11 +7,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import { methods as authentication } from "./controllers/authentication.controllers.js";
 import { methods as authorization } from "./middlewares/authorization.js";
 const app = express();
+const port = process.env.PORT || 3000;
 
-
-app.set("port", 4000);
-app.listen(app.get("port"));
-console.log(app.get("port"))
 
 
 //config
@@ -27,3 +24,7 @@ app.get("/admin", authorization.soloAdmin, (req, res) => res.sendFile(__dirname 
 app.get("/home", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/pags/admin/Home.html"));
 app.post("/api/register", authentication.register);
 app.post("/api/login", authentication.login);
+
+app.listen(port, ()=>{
+    console.log("el puerto es " + port) 
+});
