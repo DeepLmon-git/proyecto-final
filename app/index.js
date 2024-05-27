@@ -11,8 +11,8 @@ app.use(express.static(__dirname + "/public"));
 app.use(express.json());
 app.use(cookieParser());
 
-app.set("port", process.env.PORT);
-app.listen(app.get("port"));
+//app.set("port", process.env.PORT);
+//app.listen(app.get("port"));
 
 
 
