@@ -7,13 +7,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import { methods as authentication } from "./controllers/authentication.controllers.js";
 import { methods as authorization } from "./middlewares/authorization.js";
 const app = express();
+
+
+app.set("port", 4000);
+//app.listen(app.get("port"));
 app.use(express.static(__dirname + "/public"));
 app.use(express.json());
 app.use(cookieParser());
-
-//app.set("port", process.env.PORT);
-//app.listen(app.get("port"));
-
 
 
 app.get("/", authorization.soloPublico, (req, res) => res.sendFile(__dirname + "/index.html"));
