@@ -1,11 +1,11 @@
 {
   "name": "proyecto-final",
   "version": "1.0.0",
-  "main": "app/index.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node app/index.js",
-    "dev": "nodemon --exec  node app/app.js"
+    "start": "node index.js",
+    "dev": "nodemon --exec  node index.js"
   },
   "keywords": [],
   "author": "",
