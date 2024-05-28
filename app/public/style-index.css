@@ -39,7 +39,7 @@ body::-webkit-scrollbar {
   margin: 10%;
 }
 h1{
-  font-size: 58px;
+  font-size: 1.7em;
   color: #fff;
   font-weight: 800;
   letter-spacing: 1px;
@@ -75,7 +75,7 @@ td{
   color: white;
   font-weight: 300;
   font-size: 28px;
-  padding: 3.5% 20%;
+  padding: 2.5% 15%;
   border-radius: 15px;
   background: rgb(251,62,232);
 background: linear-gradient(45deg, rgba(251,62,232,1) 0%, rgba(141,20,236,1) 100%);

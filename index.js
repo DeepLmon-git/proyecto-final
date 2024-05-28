@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import { methods as authentication } from "./app/controllers/authentication.controllers.js";
 import { methods as authorization } from "./app/middlewares/authorization.js";
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 console.log(__dirname);
 
 //config

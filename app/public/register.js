@@ -4,7 +4,7 @@ const mensajeError = document.getElementsByClassName("error")[0];
 document.getElementById("register-form").addEventListener("submit",async (e)=>{
     e.preventDefault();
     console.log(e)
-    const res = await fetch("https://neumovies.onrender.com/api/register",{ 
+    const res = await fetch("https://neumovies.onrender.com/api/login"||"https://localhost:3000/api/login",{ 
     method:"POST",
     headers:{
         "Content-Type" : "application/json"
