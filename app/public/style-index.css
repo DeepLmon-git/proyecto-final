@@ -370,7 +370,7 @@ footer {
   }
   .contentText{
     width: 80%;
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   .footer-links{
     flex-direction: column;

@@ -1,3 +1,16 @@
+:root{
+  --main-color:#9015EC ;
+  --second-color:#f23be8;
+  --text-color:#e4e4e4;
+  --second-text-color:none;
+  --other-color1:#010614;
+  --other-color2:#edd854;
+  --other-color3:#c6f9fd;
+  --nav-color:#aeaeae;
+  --rojo: #E50914;
+--fondo: #141414;
+}
+
 html {
   /* Sacado de https://css-pattern.com/ */
   background-color: #9015EC;
@@ -26,6 +39,34 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+.volver{
+  color: var(--text-color);
+  font-size: 24px;
+  text-decoration: none;
+  position: absolute;
+  left: 50px;
+  top:0;
+  margin: 18px 0;
+  animation: slideInDown 1s;
+}
+
+.volver::after{
+  content: "";
+  height: 3.5px;
+  border-radius:1cap ;
+  width: 0%;
+  background-color: var(--other-color1);
+  display: block;
+  transition: all .3s ease-in-out;
+}
+.volver:hover::after{
+  width: 100%;
+ background-color: var(--second-color); 
+}
+.volver:hover{
+  color: var(--second-color);
 }
 
 .container {
