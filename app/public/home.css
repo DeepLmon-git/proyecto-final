@@ -579,4 +579,51 @@ footer {
     .peliculas-recomendadas .contenedor-principal .flecha-derecha{
         display: none;
     }
+
+
+    /* ? footer*/
+  footer{
+    height: 230.5px;
+    padding: 30px 8%;
+  }
+  .footer-links li a{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:595px){
+    /* ? footer*/
+  footer{
+    height: 230.5px;
+    padding: 30px 3%;
+    flex-direction: row;
+  }
+  .contentText{
+    width: 80%;
+    font-size: 0.7em;
+  }
+  .footer-links{
+    flex-direction: column;
+    text-align: left;
+  }
+  .footer-links li {
+    margin: 5px 0;
+  }
+  .footer-links li a{
+    font-size: 12px;
+    
+  }
+  .footer-content{
+    flex-direction: column;
+    padding-left: 10px;
+  }
+  .social-icons{
+    margin: 5px 0;
+  }
+  .social-icons a{
+    margin: 0 10px 0 0;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+
 }
