@@ -11,32 +11,39 @@
 
 <body>
   <main>
-    <div class="form-container container">
-      <h1>Crear cuenta</h1>
-      <p>Creá tu cuenta</p>
-      <form id="register-form">
+    <div class="form-container container form_main">
+      <h1 class="nocuenta">Registrate</h1>
+      <p class="nocuenta">Creá tu cuenta</p>
+      <form id="register-form" class="form">
+        <p class="heading">Registrate</p>
         <label for="user" class="sr-only">User</label>
-        <input class="input" type="text" name="user" id="user" placeholder="Nombre de usuario">
+        <input class="input inputField" type="text" name="user" id="user" placeholder="Nombre de usuario">
         <label for="email" class="sr-only input">Email</label>
-        <input class="input" type="email" name="email" id="email" placeholder="Correo electrónico">
+        <input class="input inputField" type="email" name="email" id="email" placeholder="Correo electrónico">
         <label for="password" class="sr-only">Password</label>
-        <input class="input" type="password" name="password" id="password" placeholder="Contraseña">
+        <input class="input inputField" type="password" name="password" id="password" placeholder="Contraseña">
         <label for="tel" class="sr-only">numero</label>
-        <input class="input" type="tel" name="tel" id="tel" placeholder="ej: 3125664566">
+        <input class="input inputField" type="tel" name="tel" id="tel" placeholder="ej: 3125664566">
         <div class="containerbtn">
           <div class="center">
-            <button class="btn" type="submit">
+            <button class="btn nocuenta" type="submit">
               <svg width="300px" height="60px" viewBox="0 0 300 60" class="border">
                 <polyline points="299,1 299,59 1,59 1,1 299,1" class="bg-line" />
                 <polyline points="299,1 299,59 1,59 1,1 299,1" class="hl-line" />
               </svg>
               <span><b>Crear cuenta</b></span>
             </button>
+            <button id="button" type="submit">Register</button>
+            <p class="error escondido">Error al iniciar sesión</p>
+            <div class="signupContainer">
+              <p>Ya tienes cuenta?</p>
+              <a href="/login">Inicia sesion</a>
+            </div>
           </div>
         </div>
         <p class="error escondido">Error al registrarse</p>
       </form>
-      <p>¿Ya estás registrado? - <a href="/login">Iniciar sesion</a></p>
+      <p class="nocuenta">¿Ya estás registrado? - <a href="/login" class="nocuenta">Iniciar sesion</a></p>
     </div>
   </main>
 </body>

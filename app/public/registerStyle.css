@@ -171,12 +171,146 @@ svg {
   height: 1px;
   overflow: hidden;
 }
+
+#button{
+  display: none;
+}
+.signupContainer{
+  display: none;
+}
+.heading{
+  display: none;
+}
 @media screen  and (max-width:595px){
   .nocuenta{
     display: none;
   }
   .form{
-    height: 420px;
+    height: 600px;
+  }
+  .form_main {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px 30px 30px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
+  }
+  .heading {
+    display: block;
+    font-size: 2.1em;
+    color: #2e2e2e;
+    font-weight: 600;
+    margin: 15px 0 30px 0;
+  }
+  
+  .inputContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icono {
+    position: absolute;
+    left: 10px;
+    font-size: 12px;
+  }
+  
+  .inputField {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 30px;
+    margin: 10px 0;
+    color: black;
+    font-size: .8em;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding-left: 30px;
+  }
+  
+ 
+  
+  .inputField::placeholder {
+    color: rgb(80, 80, 80);
+    font-size: 1em;
+    font-weight: 500;
+  }
+  
+  #button {
+    display: block;
+    position: relative;
+    width: 100%;
+    border: 2px solid #8000ff;
+    background-color: #8000ff;
+    height: 40px;
+    color: white;
+    font-size: .8em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  #button::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.253);
+    height: 100%;
+    width: 150px;
+    top: 0;
+    left: -200px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    filter: blur(10px);
+    transition-duration: .5s;
+  }
+  
+  #button:hover::after {
+    transform: translateX(600px);
+    transition-duration: .5s;
+  }
+  
+  .signupContainer {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .signupContainer p {
+    font-size: .9em;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .signupContainer a {
+    font-size: .7em;
+    font-weight: 500;
+    background-color: #2e2e2e;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+  }
+}
+@media screen  and (max-height:595px){
+  .nocuenta{
+    display: none;
+  }
+  .form{
+    height: 600px;
   }
   .form_main {
     width: 280px;
