@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie 1</title>
+    <link rel="stylesheet" href="NavBar.css">
+    <link rel="stylesheet" href="seriesItem.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="seriesItem.js"></script>
+    <script src="https://kit.fontawesome.com/582d0fbc48.js" crossorigin="anonymous"></script>
+    <style>
+        .mainImg {
+            width: 100%;
+            height: 100vh;
+            padding: 9% 5%;
+            overflow: hidden;
+            background: rgb(1, 6, 20);
+            background: linear-gradient(0deg, rgba(1, 6, 20, 1) 23%, rgba(1, 6, 20, 0.9037990196078431) 32%, rgba(1, 6, 20, 0.7301295518207283) 45%, rgba(1, 6, 20, 0.2959558823529411) 68%, rgba(1, 6, 20, 0.9710259103641457) 97%), url(assets/garfield.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .card {
+            --hover-bg: var(--fondo);
+            --hover-text: var(--text-color);
+            width: 100%;
+            height: 198px;
+            text-align: center;
+            background: url(assets/garfield.webp);
+            background-size: cover;
+            padding: 1.5em;
+            padding-block: 1.8em;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            transition: .3s cubic-bezier(.6, .4, 0, 1), transform .15s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Nav bar-->
+    <header class="header" id="header" onmouseleave="disapear();">
+
+        <nav class="nav" id="nav">
+            <ul class="ul" id="ul">
+                <button class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </button>
+
+                <li><a href="/home" class="a">Home</a></li>
+                <li><a href="/home" class="a">Series</a></li>
+                <li><a href="" class="a">peliculas</a></li>
+                <li><a href="" class="a">Documentales</a></li>
+            </ul>
+            <div class="userContent">
+                <button class="user" id="user" role="button"><i class="fa-solid fa-user"></i></button>
+                <div class="user-options">
+                    <ul class="userUl" id="userUl">
+                        <li>User</li>
+                        <li>E-mail</li>
+                        <li><button role="button" id="userBtn"><span>Sing Out <i
+                                        class="fa-solid fa-right-from-bracket"></i></span></button></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+    <div class="efectoShadow" id="shadow">
+
+    </div>
+    <div class="trigger" id="trigger" onmouseover="hover();">
+        <div class="flecha flechaanimation" id="flecha">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="#fff"
+                class="flechasvg"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M280.4 148.3L96 300.1V464a16 16 0 0 0 16 16l112.1-.3a16 16 0 0 0 15.9-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.6a16 16 0 0 0 16 16.1L464 480a16 16 0 0 0 16-16V300L295.7 148.3a12.2 12.2 0 0 0 -15.3 0zM571.6 251.5L488 182.6V44.1a12 12 0 0 0 -12-12h-56a12 12 0 0 0 -12 12v72.6L318.5 43a48 48 0 0 0 -61 0L4.3 251.5a12 12 0 0 0 -1.6 16.9l25.5 31A12 12 0 0 0 45.2 301l235.2-193.7a12.2 12.2 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0 -1.7-16.9z" />
+            </svg>
+        </div>
+    </div>
+    <script>
+        const trigger = document.getElementById('trigger');
+        const header = document.getElementById('header');
+        function hover() {
+            var header = document.getElementById('header');
+            var nav = document.getElementById('nav');
+            var flecha = document.getElementById('flecha');
+            var shadow = document.getElementById('shadow');
+            header.classList.add('visible');
+            nav.classList.add("visible2");
+            flecha.classList.add("flechaD");
+            flecha.classList.remove("flechaanimation");
+            shadow.classList.add("efectoShadow2");
+
+        }
+        function disapear() {
+            const listaUsuario = document.querySelector('.userUl');
+            var header = document.getElementById('header');
+            var nav = document.getElementById('nav');
+            var flecha = document.getElementById('flecha');
+            var shadow = document.getElementById('shadow');
+            header.classList.remove('visible');
+            nav.classList.remove("visible2");
+            flecha.classList.remove("flechaD");
+            flecha.classList.add("flechaanimation");
+            shadow.classList.remove("efectoShadow2");
+            listaUsuario.classList.remove('desplegado')
+        }
+
+    </script>
+    <!--fin del Nav bar-->
+    <main>
+        <!-- ?---------- Main image ---------------->
+
+        <section class="mainImg">
+            <div class="infoSerie">
+                <h1>Serie 1</h1>
+                <ul>
+                    <li>X temporadas</li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li> Categoria </li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li> Año de publicacion</li>
+                </ul>
+                <p>Historias sobre el gato Garfield, el perro Odie, su dueño Jon y los problemas en los que se meten,
+                    además el cerdo Orson y sus aventuras con otros animales de granja.</p>
+
+                <a href="#"><i class="fa-solid fa-play"></i> Ver ahora</a>
+
+
+            </div>
+            <div class="botones">
+                <button type="button" class="botonE activo" id="botonE"> Episodios </button>
+                <button type="button" class="botonE" id="botonR"> Recomendados </button>
+            </div>
+
+        </section>
+        <section class="episodios visible3">
+            <h1>Temporada 1 <i class="fa-solid fa-chevron-down"></i></h1>
+            <ul>
+                <!--Card 1-->
+                <li>
+                    <div class="card">
+
+                        <div class="icon">
+                        </div>
+
+                        <div class="card__body">
+                        </div>
+                        <span><a href="#">Reproducir <i class="fa-solid fa-play"></i></a>
+                        </span>
+                    </div>
+                    <h2>Ep1. Episodio1</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam qui eligendi id doloremque!
+                        Deserunt soluta, consequuntur aperiam animi labore quae! Officia, veniam provident temporibus
+                        perspiciatis id mollitia et odio magni!</p>
+                </li>
+                <!--Card 1-->
+                <li>
+                    <div class="card">
+
+                        <div class="icon">
+                        </div>
+
+                        <div class="card__body">
+                        </div>
+                        <span><a href="#">Reproducir <i class="fa-solid fa-play"></i></a>
+                        </span>
+                    </div>
+                    <h2>Ep1. Episodio1</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam qui eligendi id doloremque!
+                        Deserunt soluta, consequuntur aperiam animi labore quae! Officia, veniam provident temporibus
+                        perspiciatis id mollitia et odio magni!</p>
+                </li>
+                <!--Card 1-->
+                <li>
+                    <div class="card">
+
+                        <div class="icon">
+                        </div>
+
+                        <div class="card__body">
+                        </div>
+                        <span><a href="#">Reproducir <i class="fa-solid fa-play"></i></a>
+                        </span>
+                    </div>
+                    <h2>Ep1. Episodio1</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam qui eligendi id doloremque!
+                        Deserunt soluta, consequuntur aperiam animi labore quae! Officia, veniam provident temporibus
+                        perspiciatis id mollitia et odio magni!</p>
+                </li>
+                <!--Card 1-->
+                <li>
+                    <div class="card">
+
+                        <div class="icon">
+                        </div>
+
+                        <div class="card__body">
+                        </div>
+                        <span><a href="#">Reproducir <i class="fa-solid fa-play"></i></a>
+                        </span>
+                    </div>
+                    <h2>Ep1. Episodio1</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam qui eligendi id doloremque!
+                        Deserunt soluta, consequuntur aperiam animi labore quae! Officia, veniam provident temporibus
+                        perspiciatis id mollitia et odio magni!</p>
+                </li>
+                <!--Card 1-->
+                <li>
+                    <div class="card">
+
+                        <div class="icon">
+                        </div>
+
+                        <div class="card__body">
+                        </div>
+                        <span><a href="#">Reproducir <i class="fa-solid fa-play"></i></a>
+                        </span>
+                    </div>
+                    <h2>Ep1. Episodio1</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam qui eligendi id doloremque!
+                        Deserunt soluta, consequuntur aperiam animi labore quae! Officia, veniam provident temporibus
+                        perspiciatis id mollitia et odio magni!</p>
+                </li>
+                <!--Card 1-->
+                <li>
+                    <div class="card">
+
+                        <div class="icon">
+                        </div>
+
+                        <div class="card__body">
+                        </div>
+                        <span><a href="#">Reproducir <i class="fa-solid fa-play"></i></a>
+                        </span>
+                    </div>
+                    <h2>Ep1. Episodio1</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam qui eligendi id doloremque!
+                        Deserunt soluta, consequuntur aperiam animi labore quae! Officia, veniam provident temporibus
+                        perspiciatis id mollitia et odio magni!</p>
+                </li>
+                <!--Card 1-->
+                <li>
+                    <div class="card">
+
+                        <div class="icon">
+                        </div>
+
+                        <div class="card__body">
+                        </div>
+                        <span><a href="#">Reproducir <i class="fa-solid fa-play"></i></a>
+                        </span>
+                    </div>
+                    <h2>Ep1. Episodio1</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam qui eligendi id doloremque!
+                        Deserunt soluta, consequuntur aperiam animi labore quae! Officia, veniam provident temporibus
+                        perspiciatis id mollitia et odio magni!</p>
+                </li>
+
+            </ul>
+
+        </section>
+        <section class="recomendados">
+
+        </section>
+        <footer>
+            <div class="footer-content">
+                <div class="contentText">
+                    <p>© 2024. NeU Movies. Reservados todos los derechos.</p>
+                    <p>El nombre y el logotipo de NeU Movies, así como todos los programas y sus títulos y logotipos son
+                        marcas y propiedad de Neü Movies, sus afiliados y/o sus licenciatarios.</p>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/sirf35_99/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@shamfr_99"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/channel/UCVIyWb9Bnzxvey3fnzIQ4UA"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.twitch.tv/deeplmon"><i class="fa-brands fa-twitch"></i></a>
+                    <a href="https://github.com/DeepLmon-git"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos de uso</a></li>
+                <li><a href="#">Configuración de Cookies</a></li>
+                <li><a href="#">Especificaciones de anuncios</a></li>
+                <li><a href="#">Centro de ayuda</a></li>
+            </ul>
+        </footer>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Oxygen:wght@300;400;700&family=Ropa+Sans:ital@0;1&display=swap');
+:root{
+    --main-color:#9015EC ;
+    --second-color:#f23be8;
+    --text-color:#e4e4e4;
+    --second-text-color:none;
+    --other-color1:#010614;
+    --other-color2:#edd854;
+    --other-color3:#c6f9fd;
+    --nav-color:#aeaeae;
+    --rojo: #E50914;
+	--fondo: #141414;
+}
+
+/*header*/
+.header{
+    background-color: var(--fondo);
+    width: 0;
+    height: 100vh;
+    pointer-events: none;
+    position: fixed;
+    z-index: 500;
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 500ms ease-in-out;
+}
+.visible{
+    width: 350px;
+    pointer-events: auto;
+}
+
+/*nav*/
+.nav{
+    opacity: 0;
+    width: 0;
+    transition: 500ms ease-in-out;
+    overflow: hidden;
+}
+.header .ul{
+    list-style: none;
+    
+}
+.header .button{
+    border: 0;
+    background-color: transparent;
+    display: none;
+
+}
+.header li{
+    margin:2cap 0;
+    box-sizing: content-box;
+    
+}
+.header .a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 2em;
+}
+/*animacion hover*/
+.a::after{
+    content: "";
+    height: 4px;
+    border-radius:1cap ;
+    width: 0;
+    background-color: var(--main-color);
+    display: block;
+    transition: all 300ms ;
+}
+.a:hover::after{
+    width: 100%;
+}
+.trigger{
+    background-color: transparent;
+    position: fixed;
+    z-index: 20;
+    width: 40px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1cap;
+
+    box-sizing: content-box;
+}
+
+.visible2{
+    width: 260px;
+    padding: 2cap;
+    margin: 0 5px;
+    opacity: 1;
+    transition: 500ms ease-in-out;
+}
+
+/* *user*/
+.header .user{
+    background-color: var(--text-color);
+    border: none;
+    border-radius: 50%;
+    width: 1.7em;
+    height: 1.7em;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 180ms ease;
+    
+}
+.user:hover{
+    color: var(--main-color);
+}
+.userUl.desplegado{
+    height: 23%;
+    background-color: #fff;
+    z-index: 20;
+}
+.userUl{
+    margin-top: 10px;
+    padding: 18px;
+    list-style: none;
+    background-color: transparent;
+    position: absolute;
+    left: 50px;
+    z-index: -20;
+    border-radius: 25px;
+    height: 0;
+    width: 175px;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: var(--other-color1);
+    transition: all 300ms ease-in;
+    overflow: hidden;
+}
+.userUl li{
+    position: relative;
+    margin: 10%;
+}
+
+.userUl li button{
+    background-color: transparent;
+    color: var(--other-color1);
+    border: none;
+    font-weight: 700;
+    font-size: 1em;
+    transition: all .3s ease-in-out;
+}
+.userUl li button::after{
+    content: "";
+    height: 3.5px;
+    border-radius:1cap ;
+    width: 0%;
+    background-color: var(--other-color1);
+    display: block;
+    transition: all .3s ease-in-out;
+}
+.userUl li button:hover::after{
+    width: 100%;
+   background-color: var(--main-color); 
+}
+.userUl li button:hover{
+    color: var(--main-color);
+}
+/*flecha*/
+
+
+.flecha{
+width: 100%;
+
+transition: all 250ms ease-in;
+}
+.flechaanimation{
+    animation: movement 1100ms infinite alternate ease-in-out ;
+}
+.flechasvg{
+    width: 100%;
+    height: 100%;
+    
+}
+.flechaD{
+    animation: movement2 250ms forwards  ease-in-out ;
+    transition: 250ms ease-in-out;
+}
+.efectoShadow{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: -1;
+    transition: all 200ms ease-out;
+}
+.efectoShadow2{
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: .3;
+}
+@keyframes movement{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(15px);
+    }
+}
+@keyframes movement2{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+@media screen {
+    
+}

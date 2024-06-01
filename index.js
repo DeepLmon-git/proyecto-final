@@ -24,6 +24,7 @@ app.get("/login", authorization.soloPublico, (req, res) => {
 app.get("/register", authorization.soloPublico, (req, res) => res.sendFile(__dirname + "/app/pags/register.html"));
 app.get("/admin", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/admin.html"));
 app.get("/home", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/Home.html"));
+app.get("/series1", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/series/serie1.html"));
 app.post("/api/register", authentication.register);
 app.post("/api/login", authentication.login);
 
