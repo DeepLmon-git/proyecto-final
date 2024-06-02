@@ -35,14 +35,14 @@ body::-webkit-scrollbar {
     background-color: transparent;
 }
 
-.mainImg img{
+.mainImg {
     width: 100%;
-    position: sticky;
-    top:0;
-    left: 0;
-    z-index: -1;
-
+    height: 1000px;
+    padding: 9% 5%;
+    overflow: hidden;
+    
 }
+
 .mainImg .infoSerie{
     color: #fff;
     position: relative;
@@ -111,33 +111,87 @@ body::-webkit-scrollbar {
 }
 
 /*  *     episodios   */
+
+
+.episodios .card {
+    --hover-bg: var(--fondo);
+    --hover-text: var(--text-color);
+    width: 304px;
+    height: 198px;
+    text-align: center;
+    background: url(assets/garfield.webp);
+    background-size: cover;
+    padding: 1.5em;
+    padding-block: 1.8em;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s cubic-bezier(.6, .4, 0, 1), transform .15s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 10px;
+}
+.recomendados .card {
+    --hover-bg: var(--fondo);
+    --hover-text: var(--text-color);
+    width: 265px;
+    height: 370px;
+    text-align: center;
+    background: url(assets/garfield.webp);
+    background-size: cover;
+    padding: 1.5em;
+    padding-block: 1.8em;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s cubic-bezier(.6, .4, 0, 1), transform .15s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 10px;
+}
 .episodios{
     display: none;
     width: 100%;
     position: relative;
     padding: 0 5%;
-    top: -220px;
+    top: -260px;
+}
+.episodios .contenedor-texto{
+    display: flex;
+    align-items: end;
+
+}
+.contenedor-texto span{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 700;
 }
 .episodios h1{
     color: var(--text-color);
     margin-bottom: 50px;
+    margin-right: 20px;
 }
-.visible3{
-    display: block;
-}
+
 .episodios ul{
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4,1fr);
         row-gap: 20px;
-        column-gap: 20px;
+        column-gap: 158px;
 }
 .episodios li{
-    width: 304px;
+    width: 100%;
     color: var(--text-color);
 
 }
 .episodios ul p{
+    width: 304px;
     margin-block: 15px;
     font-size: 14px;
     font-weight: 300;
@@ -190,10 +244,144 @@ body::-webkit-scrollbar {
     font-size: 1.2em;
   }
   
-  .card:hover {
-    background: var(--hover-bg);
+  .episodios .card:hover {
+    background: var(--fondo);
+  }
+  .recomendados .card:hover {
+    background: var(--fondo);
   }
   
   .card:hover>div,.card:hover>strong {
     opacity: 0;
   }
+  .recomendados ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+        gap: 20px;
+}
+.recomendados li{
+    width: 100%;
+    color: var(--text-color);
+
+}
+.recomendados{
+    display: none;
+    width: 100%;
+    position: relative;
+    padding: 0 5%;
+    top: -220px;
+}
+
+.visible3{
+    display: block;
+}
+.episodios li .reproducir{
+    display: none;
+}
+
+
+
+
+@media screen  and (max-width:1784px){
+    .episodios ul{
+        grid-template-columns: repeat(4,1fr);
+        row-gap: 20px;
+        column-gap: 125px;
+    }
+    
+    
+}
+@media screen  and (max-width:1565px){
+
+}
+@media screen  and (max-width:1685px){
+    .episodios ul{
+        grid-template-columns: repeat(4,1fr);
+        row-gap: 20px;
+        column-gap: 90px;
+    }
+}
+@media screen  and (max-width:1565px){
+    .episodios ul{
+        grid-template-columns: repeat(4,1fr);
+        row-gap: 20px;
+        column-gap: 50px;
+    }
+}
+@media screen  and (max-width:1434px){
+    .episodios ul{
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 20px;
+        column-gap: 13%;
+    }
+}
+@media screen  and (max-width:1282px){
+    
+    .episodios ul{
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 20px;
+        column-gap: 30%;
+    }
+}
+@media screen  and (max-width:925px){
+    
+    .episodios ul{
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 20px;
+        column-gap: 10%;
+    }
+}
+@media screen  and (max-width:726px){
+    .episodios .card{
+        width: 184px;
+        height: 104px;
+    }
+    
+    .episodios ul{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 20px;
+        
+    }
+    .episodios li{
+        display: flex;
+        align-items: center;
+    }
+    .episodios .contenedor-texto{
+        margin-left: 20px;
+        padding-top: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+    }
+    .contenedor-texto h2{
+        font-size: 16px;
+    }
+    .contenedor-texto span{
+        margin-top: 10px;
+        margin-left: 0;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .episodios p{
+        display: none;
+    }
+    .episodios li .reproducir{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        color: white;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--second-color);
+        margin-left: 15%;
+    }
+}
+@media screen and(max-width:400px) {
+    .episodios li .reproducir{
+        margin-left: 0;
+    }
+}
