@@ -12,20 +12,6 @@ function disableButtons(state){
     }
 }
 
-	/*-------------------Sing Out--------------------*/ 
-
-	document.getElementById("userBtn").addEventListener("click",()=>{
-		document.cookie ='jwt=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-		document.location.href = "/"
-	  })
-
-	const botonUsuario= document.querySelector('.user');
-	const listaUsuario= document.querySelector('.userUl');
-
-	botonUsuario.addEventListener('click',()=>{
-		listaUsuario.classList.toggle('desplegado')
-	})
-
     const btnEpisodios = document.getElementById('botonE');
     const btnRecomendados = document.getElementById('botonR');
     const sectionEpisodios = document.querySelector('.episodios');
