@@ -26,7 +26,7 @@ app.get("/admin", authorization.soloAdmin, (req, res) => res.sendFile(__dirname 
 app.get("/home", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/Home.html"));
 app.get("/the-gardfield's-show", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/series/serie1.html"));
 app.get("/loki", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/series/serie2.html"));
-app.get("/3", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/series/serie3.html"));
+app.get("/regular-show", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/series/serie3.html"));
 app.get("/4", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/series/serie4.html"));
 app.get("/5", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/series/serie5.html"));
 app.post("/api/register", authentication.register);
