@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serie 5</title>
+    <title>Adventure</title>
     <link rel="stylesheet" href="NavBar.css">
     <link rel="stylesheet" href="seriesItem.css">
     <link rel="stylesheet" href="footer.css">
@@ -13,21 +13,37 @@
     <script src="Navbar.js"></script>
     <style>
         .mainImg-bg {
-            background: rgb(1, 6, 20);
-            background: linear-gradient(0deg, rgba(1, 6, 20, 1) 23%, rgba(1, 6, 20, 0.9037990196078431) 32%, rgba(1, 6, 20, 0.7301295518207283) 45%, rgba(1, 6, 20, 0.2959558823529411) 68%, rgba(1, 6, 20, 0.9710259103641457) 97%), url(assets/loki.webp);
+            background-image: url(assets/finn-bg.webp);
             background-size: cover;
             background-repeat: no-repeat;
         }
-        .episodios .card.img{
-            background: url(assets/loki.webp);
+        .recomendados .card.img1 {
+            background-image: url(assets/lokiV.webp);
             background-size: cover;
-            background-repeat: no-repeat;
+        }
+        .recomendados .card.img2 {
+            background-image: url(assets/show+V.webp);
+            background-size: cover;
+        }
+        .recomendados .card.img3 {
+            background-image: url(assets/bbV.webp);
+            background-size: cover;
+        }
+
+        .episodios .card.img {
+            background-image: url(assets/finnC.webp);
+            background-size: cover;
+        }
+        .mainImg .infoSerie{
+            color: #e4e4e4;
+        }
+        .mainImg .infoSerie p{
+            width: 480px;
         }
 
         @media screen and (max-width:1282px) {
             .mainImg-bg {
-                background: rgb(1, 6, 20);
-                background: linear-gradient(0deg, rgba(1, 6, 20, 1) 23%, rgba(1, 6, 20, 0.9037990196078431) 32%, rgba(1, 6, 20, 0.7301295518207283) 45%, rgba(1, 6, 20, 0.2959558823529411) 68%, rgba(1, 6, 20, 0.9710259103641457) 97%), url(assets/loki.webp);
+                background-image: url(assets/finn-bg.webp);
                 background-size: 1300px;
             }
         }
@@ -38,8 +54,7 @@
             }
 
             .mainImg-bg {
-                background: rgb(1, 6, 20);
-                background: linear-gradient(0deg, rgba(1, 6, 20, 1) 23%, rgba(1, 6, 20, 0.9037990196078431) 32%, rgba(1, 6, 20, 0.7301295518207283) 45%, rgba(1, 6, 20, 0.2959558823529411) 68%, rgba(1, 6, 20, 0.9710259103641457) 97%), url(assets/loki.webp);
+                background-image: url(assets/finn-bg.webp);
                 background-size: 950px;
                 background-repeat: no-repeat;
             }
@@ -49,9 +64,10 @@
             .mainImg {
                 height: 900px;
             }
+            
+
             .mainImg-bg {
-                background: rgb(1, 6, 20);
-                background: linear-gradient(0deg, rgba(1, 6, 20, 1) 23%, rgba(1, 6, 20, 0.9037990196078431) 32%, rgba(1, 6, 20, 0.7301295518207283) 45%, rgba(1, 6, 20, 0.2959558823529411) 68%, rgba(1, 6, 20, 0.9710259103641457) 97%), url(assets/loki.webp);
+                background-image: url(assets/finn-bg.webp);
                 background-size: 950px;
                 background-repeat: no-repeat;
                 background-position-x: -280px;
@@ -69,18 +85,18 @@
             }
 
             .mainImg-bg {
-                background: rgb(1, 6, 20);
-                background: linear-gradient(0deg, rgba(1, 6, 20, 1) 23%, rgba(1, 6, 20, 0.9037990196078431) 32%, rgba(1, 6, 20, 0.7301295518207283) 45%, rgba(1, 6, 20, 0.2959558823529411) 68%, rgba(1, 6, 20, 0.9710259103641457) 97%), url(assets/loki.webp);
-                background-size: 800px;
+                background-image: url(assets/finn-bg.webp);
+                background-size: 600px;
                 background-repeat: no-repeat;
                 background-position-x: -140px;
             }
 
             .episodios {
-                top: -150px;
+                top: -100px;
             }
-            .recomendados{
-                top: -150px;
+
+            .recomendados {
+                top: -100px;
             }
         }
     </style>
@@ -140,16 +156,15 @@
         <section class="mainImg mainImg-bg">
             <div class="responsiveImg"></div>
             <div class="infoSerie">
-                <h1>Serie 1</h1>
+                <h1>Adventure Time</h1>
                 <ul>
-                    <li>X temporadas</li>
+                    <li>1 temporada</li>
                     <li><i class="fa-solid fa-circle"></i></li>
-                    <li> Categoria </li>
+                    <li> Aventura </li>
                     <li><i class="fa-solid fa-circle"></i></li>
-                    <li> Año de publicacion</li>
+                    <li> 2010</li>
                 </ul>
-                <p>Historias sobre el gato Garfield, el perro Odie, su dueño Jon y los problemas en los que se meten,
-                    además el cerdo Orson y sus aventuras con otros animales de granja.</p>
+                <p>La serie sigue las aventuras de Finn, un niño, y Jake, un perro con poderes mágicos con los que puede cambiar de forma, crecer y encoger a voluntad, que habitan en la post-apocalíptica Tierra de Ooo</p>
 
                 <a href="#"><i class="fa-solid fa-play"></i> Ver ahora</a>
 
@@ -340,7 +355,7 @@
 
                         <div class="card__body">
                         </div>
-                        <span><a href="#">Ver ahora <i class="fa-solid fa-play"></i></a>
+                        <span><a href="/loki">Ver ahora <i class="fa-solid fa-play"></i></a>
                         </span>
                     </div>
                 </li>
@@ -353,7 +368,7 @@
 
                         <div class="card__body">
                         </div>
-                        <span><a href="#">Ver ahora <i class="fa-solid fa-play"></i></a>
+                        <span><a href="/regular-show">Ver ahora <i class="fa-solid fa-play"></i></a>
                         </span>
                     </div>
                 </li>
@@ -366,7 +381,7 @@
 
                         <div class="card__body">
                         </div>
-                        <span><a href="#">Ver ahora <i class="fa-solid fa-play"></i></a>
+                        <span><a href="/breaking-bad">Ver ahora <i class="fa-solid fa-play"></i></a>
                         </span>
                     </div>
                 </li>
@@ -379,7 +394,7 @@
 
                         <div class="card__body">
                         </div>
-                        <span><a href="#">Ver ahora <i class="fa-solid fa-play"></i></a>
+                        <span><a href="/the-garfield's-show">Ver ahora <i class="fa-solid fa-play"></i></a>
                         </span>
                     </div>
                 </li>

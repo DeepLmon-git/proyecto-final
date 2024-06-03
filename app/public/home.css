@@ -195,9 +195,11 @@ body::-webkit-scrollbar {
 }
 .peliculas-recomendadas .contenedor-carrusel .carrusel .pelicula-x{
     min-width: 18%;
+    max-height: 140px;
     margin: 1%;
     transition: .3s ease all;
     box-shadow: 5px 5px 10px rgba(0, 0, 0,.3);
+    overflow: hidden;
 } 
 .peliculas-recomendadas .contenedor-carrusel .carrusel .peliculaAll.hover{
     transform: scale(1.2);
@@ -206,6 +208,7 @@ body::-webkit-scrollbar {
 .peliculas-recomendadas .contenedor-carrusel .carrusel .pelicula-x img{
     width: 100%;
     vertical-align: top;
+    
 }
 
 /* ---- ----- ----- Peliculas vertical ----- ----- ----- */
