@@ -29,6 +29,11 @@ app.get("/loki", authorization.soloAdmin, (req, res) => res.sendFile(__dirname +
 app.get("/regular-show", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/series/serie3.html"));
 app.get("/breaking-bad", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/series/serie4.html"));
 app.get("/adventure-time", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/series/serie5.html"));
+app.get("/matrix", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/peliculas/pelicula1.html"));
+app.get("/xmen", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/peliculas/pelicula2.html"));
+app.get("/piratas-del-caribe", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/peliculas/pelicula3.html"));
+app.get("/ready-player-one", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/peliculas/pelicula4.html"));
+app.get("/interestelar", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/app/pags/admin/peliculas/pelicula5.html"));
 app.post("/api/register", authentication.register);
 app.post("/api/login", authentication.login);
 
