@@ -538,10 +538,10 @@ body::-webkit-scrollbar {
         width: 100%;
     }
     .episodios{
-        top:-140px;
+        top:-100px;
     }
     .recomendados{
-        top:-140px;
+        top:-100px;
     }
 }
 
