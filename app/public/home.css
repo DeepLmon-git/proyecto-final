@@ -21,7 +21,7 @@
 
 body {
     background-color: var(--other-color1);
-    scroll-behavior:auto;
+    scroll-behavior: auto;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -41,24 +41,36 @@ body::-webkit-scrollbar {
 
     box-sizing: border-box;
     width: 100%;
-    height: 750px;
-    overflow: hidden;
+    height: 80vh;
+
+    scroll-behavior: smooth;
 
 }
 
-.slider-box ul {
+.slider-box .ul {
+    width: 400%;
     list-style: none;
-
     display: flex;
-    justify-content: none;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     padding: 0;
     margin: 0;
-    width: 400%;
     height: 100%;
-    animation: slide 20s infinite alternate ease-in-out;
+    scroll-behavior: smooth;
+    /*animation: slide 20s infinite alternate ease-in-out;*/
 }
 
-.slider-box li {
+.slider-box .contenedor-imagenes {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+
+.slider-box .li {
     display: flex;
     padding: 0;
     margin: 0;
@@ -104,7 +116,8 @@ body::-webkit-scrollbar {
 .texto a:hover {
     background-color: rgba(27, 27, 27, 1);
 }
-.texto a i{
+
+.texto a i {
     margin-right: 8px;
 }
 
@@ -125,6 +138,59 @@ body::-webkit-scrollbar {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, .4);
+}
+
+/*                ? botones importante                */
+.slider-box .slider-botones .botones-item button {
+    background: rgba(255, 255, 255, .4);
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.slider-box .slider-botones {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    padding-bottom: 20px;
+    z-index: 2;
+}
+
+.slider-box .slider-botones .botones-item button.activo2,
+.slider-box .slider-botones .botones-item button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.slider-box .flechaImg1,
+.slider-box .flechaImg2 {
+    display: none;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    font-size: 38px;
+    font-weight: 300;
+    height: 40px;
+    top: 50%;
+    line-height: 10px;
+    width: 50px;
+    cursor: pointer;
+    color: var(--text-color);
+    z-index: 10;
+    transition: .2s ease all;
+}
+
+.slider-box .flechaImg1 {
+    left: 20px;
+}
+
+.slider-box .flechaImg2 {
+    right: 20px;
 }
 
 @keyframes slide {
@@ -354,19 +420,22 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 
-.slider-box .img1 {
+.slider-box .contenedor-imagenes .img1 {
     background-image: url(assets/loki2.webp);
     background-size: cover;
 }
-.slider-box .img2 {
+
+.slider-box .contenedor-imagenes .img2 {
     background-image: url(assets/show-.webp);
     background-size: cover;
 }
-.slider-box .img3 {
+
+.slider-box .contenedor-imagenes .img3 {
     background-image: url(assets/bb.webp);
     background-size: cover;
 }
-.slider-box .img4 {
+
+.slider-box .contenedor-imagenes .img4 {
     background-image: url(assets/interW.webp);
     background-size: cover;
 }
@@ -388,7 +457,7 @@ body::-webkit-scrollbar {
 
 /* *?---- ----- ----- @media querys ----- ----- ----- */
 
-@media screen and (max-width:920px) {
+@media screen and (max-width:1000px) {
     .peliculas-recomendadas .contenedor-carrusel {
         overflow: visible;
     }
@@ -420,71 +489,132 @@ body::-webkit-scrollbar {
     .peliculas-recomendadas .contenedor-principal .flecha-derecha {
         display: none;
     }
+
     /* *?---- ----- ----- main Img----- ----- ----- */
-    .slider-box .texto{
+    .slider-box .texto {
         display: none;
     }
-    .slider-box{
+
+    .slider-box {
         height: 540px;
     }
-    .slider-box li{
+
+    .slider-box .slider-botones {
+        height: 470px;
+    }
+   
+    .slider-box .slider-botones .botones-item button {
+        display: none;
+    }
+
+    .slider-box .flechaImg1,
+    .slider-box .flechaImg2 {
+        display: block;
+    }
+
+    .slider-box .li {
         width: 80%;
         height: 80%;
         margin: 1%;
         border-radius: 20px;
     }
-    .slider-box .oscurecer{
+    .slider-box  .flechaImg1{
+        left: 60px;
+    }
+    .slider-box  .flechaImg2{
+        right: 60px;
+    }
+
+    .slider-box .oscurecer {
         display: none;
     }
-    .slider-box .linkR{
-        width: 100%;
+
+    .slider-box .linkR {
+        width: 80%;
+        margin-inline: 10%;
         height: 100%;
+        z-index: 2;
     }
-    .slider-box .img1 {
+
+    .slider-box .contenedor-imagenes .img1 {
         background-image: url(assets/lokiW.webp);
         background-size: cover;
     }
-    .slider-box .img2 {
+
+    .slider-box .contenedor-imagenes .img2 {
         background-image: url(assets/showW.webp);
         background-size: cover;
     }
-    .slider-box .img3 {
+
+    .slider-box .contenedor-imagenes .img3 {
         background-image: url(assets/bbW.webp);
         background-size: cover;
     }
-    .slider-box .img4 {
+
+    .slider-box .contenedor-imagenes .img4 {
         background-image: url(assets/interW2.webp);
         background-size: cover;
     }
 
 
 }
+@media screen and (max-width:950px){
+    .slider-box  .flechaImg1{
+        left: 35px;
+    }
+    .slider-box  .flechaImg2{
+        right: 35px;
+    }
+}
 
 @media screen and (max-width:595px) {
-    .slider-box .texto{
+    .slider-box .texto {
         display: none;
     }
-    .slider-box{
+
+    .slider-box {
         height: 310px;
     }
-    .slider-box li{
+
+    .slider-box .slider-botones {
+        height: 260px;
+    }
+
+    .slider-box .slider-botones .botones-item {
+        position: relative;
+        z-index: 6;
+    }
+
+    .slider-box .li {
         width: 80%;
         height: 80%;
         margin: 1%;
         border-radius: 20px;
     }
-    .slider-box .oscurecer{
+
+    .slider-box .oscurecer {
         display: none;
     }
-    .slider-box .linkR{
-        width: 100%;
+
+    .slider-box .linkR {
+        width: 80%;
+        margin-inline: 10%;
         height: 100%;
+        z-index: 2;
     }
-    .slider-box .img4 {
+
+    .slider-box .contenedor-imagenes .img4 {
         background-image: url(assets/interW2.webp);
         background-size: cover;
     }
-    .peliculas-recomendadas .contenedor-carrusel .carrusel .pelicula-x{
+
+    .peliculas-recomendadas .contenedor-carrusel .carrusel .pelicula-x {
         max-height: 112px;
+    }
+    .slider-box  .flechaImg1{
+        left: 25px;
+    }
+    .slider-box  .flechaImg2{
+        right: 25px;
     }
 }

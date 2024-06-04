@@ -1,18 +1,58 @@
 window.addEventListener("DOMContentLoaded", (event) => {
 	var btns = document.getElementsByTagName('button');
-for(var i=0;i<btns.length;i++){
-    btns[i].addEventListener('click', function(){
-        disableButtons(true);
-        setTimeout(function(){disableButtons(false);}, 600);
-    });    
-}
-function disableButtons(state){
-    for(var i=0;i<btns.length;i++){
-        btns[i].disabled = !!state;    
-    }
-}
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].addEventListener('click', function () {
+			disableButtons(true);
+			setTimeout(function () { disableButtons(false); }, 600);
+		});
+	}
+	function disableButtons(state) {
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].disabled = !!state;
+		}
+	}
 
- 
+	/* ---- ----- ----- Carusel imagen principal ----- ----- ----- */
+
+	const imagen = document.querySelector('.contenedor-imagenes');
+	const flechaiH = document.querySelector('.flechaImg1')
+	const flechadH = document.querySelector('.flechaImg2')
+	flechadH.addEventListener('click', function () {
+		imagen.scrollLeft += imagen.offsetWidth;
+
+
+		const botonItemActivo = document.querySelector('.indicadores .activo2');
+		if (botonItemActivo.nextSibling) {
+			botonItemActivo.nextSibling.classList.add('activo2');
+			botonItemActivo.classList.remove('activo2')
+		}
+	});
+	flechaiH.addEventListener('click', function () {
+		imagen.scrollLeft -= imagen.offsetWidth;
+		const botonItemActivo = document.querySelector('.indicadores .activo2');
+		if (botonItemActivo.previousSibling) {
+			botonItemActivo.previousSibling.classList.add('activo2');
+			botonItemActivo.classList.remove('activo2')
+		}
+	});
+
+	for (let i = 0; i < 4; i++) {
+		const botonItem = document.createElement('button');
+
+		if (i === 0) {
+			botonItem.classList.add('activo2');
+		}
+
+		document.querySelector('.botones-item').appendChild(botonItem);
+		botonItem.addEventListener('click', (e) => {
+			imagen.scrollLeft = i * imagen.offsetWidth;
+			document.querySelector('.botones-item .activo2').classList.remove('activo2');
+			e.target.classList.add('activo2');
+		})
+	}
+
+
+
 	/* ---- ----- ----- Carousel 1 ----- ----- ----- */
 	const fila = document.querySelector('.contenedor-carrusel');
 	const peliculas = document.querySelectorAll('.pelicula');
@@ -49,95 +89,95 @@ function disableButtons(state){
 	/* ---- ----- ----- Carousel 5 ----- ----- ----- */
 
 	const fila5 = document.querySelector('.contenedor-carrusel5');
-	const peliculas5= document.querySelectorAll('.pelicula5');
+	const peliculas5 = document.querySelectorAll('.pelicula5');
 
 	const flechaIzquierda5 = document.getElementById('flecha-izquierda5');
 	const flechaDerecha5 = document.getElementById('flecha-derecha5');
 
 	// ? Event listener para la flecha derecha
-		flechaDerecha.addEventListener('click', function () {
-			fila.scrollLeft += fila.offsetWidth;
-		
-	
-			const indicadorActivo = document.querySelector('.indicadores .activo');
-			if(indicadorActivo.nextSibling){
-				indicadorActivo.nextSibling.classList.add('activo');
-				indicadorActivo.classList.remove('activo')
-			}
-		});
-		flechaIzquierda.addEventListener('click', function () {
-			fila.scrollLeft -= fila.offsetWidth;
-			const indicadorActivo = document.querySelector('.indicadores .activo');
-			if(indicadorActivo.previousSibling){
-				indicadorActivo.previousSibling.classList.add('activo');
-				indicadorActivo.classList.remove('activo')
-			}
-		});
-	
-	
+	flechaDerecha.addEventListener('click', function () {
+		fila.scrollLeft += fila.offsetWidth;
+
+
+		const indicadorActivo = document.querySelector('.indicadores .activo');
+		if (indicadorActivo.nextSibling) {
+			indicadorActivo.nextSibling.classList.add('activo');
+			indicadorActivo.classList.remove('activo')
+		}
+	});
+	flechaIzquierda.addEventListener('click', function () {
+		fila.scrollLeft -= fila.offsetWidth;
+		const indicadorActivo = document.querySelector('.indicadores .activo');
+		if (indicadorActivo.previousSibling) {
+			indicadorActivo.previousSibling.classList.add('activo');
+			indicadorActivo.classList.remove('activo')
+		}
+	});
+
+
 	// ? Event listener para la flecha derecha 2
 
-	flechaDerecha2.addEventListener('click', ()=> {
+	flechaDerecha2.addEventListener('click', () => {
 		fila2.scrollLeft += fila2.offsetWidth;
 
 		const indicadorActivo = document.querySelector('.indicadores2 .activo');
-		if(indicadorActivo.nextSibling){
+		if (indicadorActivo.nextSibling) {
 			indicadorActivo.nextSibling.classList.add('activo');
 			indicadorActivo.classList.remove('activo')
 		}
 	});
-	flechaIzquierda2.addEventListener('click', ()=> {
+	flechaIzquierda2.addEventListener('click', () => {
 		fila2.scrollLeft -= fila2.offsetWidth;
 		const indicadorActivo = document.querySelector('.indicadores2 .activo');
-		if(indicadorActivo.previousSibling){
+		if (indicadorActivo.previousSibling) {
 			indicadorActivo.previousSibling.classList.add('activo');
 			indicadorActivo.classList.remove('activo')
 		}
-	});  
+	});
 
 
-	
-	
+
+
 	// ? Event listener para la flecha derecha 3
 
-	flechaDerecha3.addEventListener('click', ()=> {
+	flechaDerecha3.addEventListener('click', () => {
 		fila3.scrollLeft += fila3.offsetWidth;
 
 		const indicadorActivo = document.querySelector('.indicadores3 .activo');
-		if(indicadorActivo.nextSibling){
+		if (indicadorActivo.nextSibling) {
 			indicadorActivo.nextSibling.classList.add('activo');
 			indicadorActivo.classList.remove('activo')
 		}
 	});
-	flechaIzquierda3.addEventListener('click', ()=> {
+	flechaIzquierda3.addEventListener('click', () => {
 		fila3.scrollLeft -= fila3.offsetWidth;
 		const indicadorActivo = document.querySelector('.indicadores3 .activo');
-		if(indicadorActivo.previousSibling){
+		if (indicadorActivo.previousSibling) {
 			indicadorActivo.previousSibling.classList.add('activo');
 			indicadorActivo.classList.remove('activo')
 		}
-	});  
+	});
 
 
 	// ? Event listener para la flecha derecha 5
 
-	flechaDerecha5.addEventListener('click', ()=> {
+	flechaDerecha5.addEventListener('click', () => {
 		fila5.scrollLeft += fila5.offsetWidth;
 
 		const indicadorActivo = document.querySelector('.indicadores5 .activo');
-		if(indicadorActivo.nextSibling){
+		if (indicadorActivo.nextSibling) {
 			indicadorActivo.nextSibling.classList.add('activo');
 			indicadorActivo.classList.remove('activo')
 		}
 	});
-	flechaIzquierda5.addEventListener('click', ()=> {
+	flechaIzquierda5.addEventListener('click', () => {
 		fila5.scrollLeft -= fila5.offsetWidth;
 		const indicadorActivo = document.querySelector('.indicadores5 .activo');
-		if(indicadorActivo.previousSibling){
+		if (indicadorActivo.previousSibling) {
 			indicadorActivo.previousSibling.classList.add('activo');
 			indicadorActivo.classList.remove('activo')
 		}
-	});  
+	});
 
 
 	//? paginacion 1
@@ -150,7 +190,7 @@ function disableButtons(state){
 		}
 
 		document.querySelector('.indicadores1').appendChild(indicador);
-		indicador.addEventListener('click', (e)=>{
+		indicador.addEventListener('click', (e) => {
 			fila.scrollLeft = i * fila.offsetWidth;
 			document.querySelector('.indicadores1 .activo').classList.remove('activo');
 			e.target.classList.add('activo');
@@ -158,7 +198,7 @@ function disableButtons(state){
 	}
 
 
-	
+
 	//? paginacion 2
 	const numPag2 = Math.ceil(peliculas2.length / 5);
 	for (let f = 0; f < numPag2; f++) {
@@ -169,7 +209,7 @@ function disableButtons(state){
 		}
 
 		document.querySelector('.indicadores2').appendChild(indicador2);
-		indicador2.addEventListener('click', (e)=>{
+		indicador2.addEventListener('click', (e) => {
 			fila2.scrollLeft = f * fila2.offsetWidth;
 			document.querySelector('.indicadores2 .activo').classList.remove('activo');
 			e.target.classList.add('activo');
@@ -187,7 +227,7 @@ function disableButtons(state){
 		}
 
 		document.querySelector('.indicadores3').appendChild(indicador3);
-		indicador3.addEventListener('click', (e)=>{
+		indicador3.addEventListener('click', (e) => {
 			fila3.scrollLeft = g * fila3.offsetWidth;
 			document.querySelector('.indicadores3 .activo').classList.remove('activo');
 			e.target.classList.add('activo');
@@ -205,7 +245,7 @@ function disableButtons(state){
 		}
 
 		document.querySelector('.indicadores5').appendChild(indicador5);
-		indicador5.addEventListener('click', (e)=>{
+		indicador5.addEventListener('click', (e) => {
 			fila5.scrollLeft = j * fila5.offsetWidth;
 			document.querySelector('.indicadores5 .activo').classList.remove('activo');
 			e.target.classList.add('activo');
@@ -217,32 +257,32 @@ function disableButtons(state){
 
 	//? hover 1
 
-	peliculasAll.forEach((peliculaAll)=>{
-		peliculaAll.addEventListener('mouseenter', (e)=>{
+	peliculasAll.forEach((peliculaAll) => {
+		peliculaAll.addEventListener('mouseenter', (e) => {
 			const elemento = e.currentTarget;
-			setTimeout(()=>{
+			setTimeout(() => {
 				peliculasAll.forEach(peliculaAll => peliculaAll.classList.remove('hover'));
 				elemento.classList.add('hover');
 			}, 100)
 		})
 	})
-	fila.addEventListener('mouseleave', ()=>{
+	fila.addEventListener('mouseleave', () => {
 		peliculasAll.forEach(peliculaAll => peliculaAll.classList.remove('hover'))
 	})
-	fila2.addEventListener('mouseleave', ()=>{
+	fila2.addEventListener('mouseleave', () => {
 		peliculasAll.forEach(peliculaAll => peliculaAll.classList.remove('hover'))
 	})
-	fila3.addEventListener('mouseleave', ()=>{
+	fila3.addEventListener('mouseleave', () => {
 		peliculasAll.forEach(peliculaAll => peliculaAll.classList.remove('hover'))
 	})
-	fila4.addEventListener('mouseleave', ()=>{
+	fila4.addEventListener('mouseleave', () => {
 		peliculasAll.forEach(peliculaAll => peliculaAll.classList.remove('hover'))
 	})
-	fila5.addEventListener('mouseleave', ()=>{
+	fila5.addEventListener('mouseleave', () => {
 		peliculasAll.forEach(peliculaAll => peliculaAll.classList.remove('hover'))
 	})
 
-	
+
 
 });
 

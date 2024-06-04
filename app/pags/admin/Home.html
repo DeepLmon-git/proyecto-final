@@ -2,428 +2,474 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#010614">
-    <title>Home</title>
+	<title>Home</title>
 	<link rel="stylesheet" href="NavBar.css">
-    <link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="home.css">
 	<link rel="stylesheet" href="footer.css">
-    <script src="home.js">
-    </script>
+	<script src="home.js">
+	</script>
 	<script src="https://kit.fontawesome.com/582d0fbc48.js" crossorigin="anonymous"></script>
 	<script src="Navbar.js"></script>
 
-    
+
 </head>
 
 <body>
-    <!--Nav bar-->
+	<!--Nav bar-->
 	<div class="navR">
 		<a href="/home" aria-label="si"><img src="assets/logo final.svg" alt="si"></a>
 		<button role="button" class="botonMenu" onclick="hover()"><i class="fa-solid fa-ellipsis"></i></button>
 	</div>
-    <header class="header" id="header" >
+	<header class="header" id="header">
 
-		
+
 		<button type="button" class="cerrar"><i class="fa-solid fa-xmark"></i></button>
-        <nav class="nav" id="nav">
-            <ul class="ul" id="ul">
+		<nav class="nav" id="nav">
+			<ul class="ul" id="ul">
 
-                <li><a href="/home" class="a">Home</a></li>
-                <li><a href="#series" class="a">Series</a></li>
-                <li><a href="#peliculas" class="a">peliculas</a></li>
-                <li><a href="#documentales" class="a">Documentales</a></li>
-            </ul>
+				<li><a href="/home" class="a">Home</a></li>
+				<li><a href="#series" class="a">Series</a></li>
+				<li><a href="#peliculas" class="a">peliculas</a></li>
+				<li><a href="#documentales" class="a">Documentales</a></li>
+			</ul>
 			<div class="userContent">
 				<button class="user" role="button"><i class="fa-solid fa-user"></i></button>
 				<div class="user-options">
 					<ul class="userUl">
 						<li>User</li>
 						<li>E-mail</li>
-						<li><button role="button" id="userBtn"><span>Sing Out <i class="fa-solid fa-right-from-bracket"></i></span></button></li>
+						<li><button role="button" id="userBtn"><span>Sing Out <i
+										class="fa-solid fa-right-from-bracket"></i></span></button></li>
 					</ul>
 				</div>
-				
-			</div>
-			
-        </nav>
-		
-    </header>
-    <div class="efectoShadow" id="shadow">
 
-    </div>
-    <div class="trigger" id="trigger" onmouseover="hover();">
-        <div class="flecha flechaanimation" id="flecha">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="#fff"
-                class="flechasvg"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path
-                    d="M280.4 148.3L96 300.1V464a16 16 0 0 0 16 16l112.1-.3a16 16 0 0 0 15.9-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.6a16 16 0 0 0 16 16.1L464 480a16 16 0 0 0 16-16V300L295.7 148.3a12.2 12.2 0 0 0 -15.3 0zM571.6 251.5L488 182.6V44.1a12 12 0 0 0 -12-12h-56a12 12 0 0 0 -12 12v72.6L318.5 43a48 48 0 0 0 -61 0L4.3 251.5a12 12 0 0 0 -1.6 16.9l25.5 31A12 12 0 0 0 45.2 301l235.2-193.7a12.2 12.2 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0 -1.7-16.9z" />
-            </svg>
-        </div>
-    </div>
-    <!--fin del Nav bar-->
-    <main>
-        <!--carrusel-->
-        <div class="slider-box">
-            <ul>
-                <li class="img1">
-					<div class="oscurecer"></div>
-					<a href="/loki" aria-label="boton-Reproducir" class="linkR"></a>
-                    
-                    <div class="texto">
-                        <h2>Loki</h2>
-                        <p>Loki es llevado ante la misteriosa organización llamada Autoridad de Variación Temporal después de robar el Cubo Cósmico durante los eventos de 'Avengers: Endgame' (2019) y se le da a elegir entre enfrentarse a la eliminación de la realidad o ayudar contra una amenaza mayor,​ por lo cual Loki termina viajando a través del tiempo, alterando la historia humana.</p>
-						<a href="" aria-label="boton Reproducir" class="botonesMain"> <i class="fa-solid fa-play"></i> Reproducir</a>
-						<a href="/loki" aria-label="boton-mas" class="botonesMain"><i class="fa-solid fa-circle-info"></i> Mas Informacion</a>
-                    </div>
-                </li>
-                <li class="img2">
-					<div class="oscurecer"></div>
-					<a href="/regular-show" aria-label="boton-Reproducir" class="linkR"></a>
-                    <div class="texto">
-                        <h2>Regular Show</h2>
-                        <p>La serie que trata sobre una pareja de alocados amigos, un mapache llamado Rigby y un pájaro azul llamado Mordecai. Los dos son jardineros en un parque propiedad de Pops, una paleta de aspecto humanoide. El problema que tienen estos personajes es que el trabajo que hacen es tan duro que lo intentarán evitar de todas las maneras posibles.</p>
-						<a href="" aria-label="boton Reproducir" class="botonesMain"> <i class="fa-solid fa-play"></i> Reproducir</a>
-						<a href="/regular-show" aria-label="boton-mas" class="botonesMain"><i class="fa-solid fa-circle-info"></i> Mas Informacion</a>
-                    </div>
-                </li>
-                <li class="img3">
-					<div class="oscurecer"></div>
-					<a href="/breaking-bad" aria-label="boton-Reproducir" class="linkR"></a>
-                    <div class="texto">
-                        <h2>Breaking Bad</h2>
-                        <p>Un profesor de Química de secundaria con cáncer terminal se asocia a un exestudiante para asegurar el futuro de su familia al fabricar y vender metanfetamina.</p>
-						<a href="" aria-label="boton Reproducir" class="botonesMain"> <i class="fa-solid fa-play"></i> Reproducir</a>
-						<a href="/breaking-bad" aria-label="boton-mas" class="botonesMain"><i class="fa-solid fa-circle-info"></i> Mas Informacion</a>
-                    </div>
-                </li>
-                <li class="img4">
-					<div class="oscurecer"></div>
-                    <a href="/interestelar" aria-label="boton-Reproducir" class="linkR"></a>
-                    <div class="texto">
-                        <h2>interestelar</h2>
-                        <p>Un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí. La Tierra está llegando a su fin y este grupo necesita encontrar un planeta más allá de nuestra galaxia que garantice el futuro de la raza humana.</p>
-						<a href="" aria-label="boton Reproducir" class="botonesMain"> <i class="fa-solid fa-play"></i> Reproducir</a>
-						<a href="/interestelar" aria-label="boton-mas" class="botonesMain"><i class="fa-solid fa-circle-info"></i> Mas Informacion</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <!--fin carrusel-->
-        <div class="page">
-			 <!--series-->
-        <div class="peliculas-recomendadas contenedor">
-			<div class="contenedor-titulo-controles">
-				<h3 id="series">Neu Series</h3>
-				<div class="indicadores indicadores1">
-				</div>
 			</div>
-			<div class="contenedor-principal">
-				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
-				<div class="contenedor-carrusel">
-					<div class="carrusel">
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/the-garfield's-show"><img src="assets/garfield.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/loki"><img src="assets/lokiW.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/regular-show"><img src="assets/showhome.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/breaking-bad"><img src="assets/bbhome.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x">
-							<a href="/adventure-time"><img src="assets/finnhome.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/loki"><img src="assets/lokiW.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x">
-							<a href="/adventure-time"><img src="assets/finnhome.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/the-garfield's-show"><img src="assets/garfield.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/breaking-bad"><img src="assets/bbhome.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/regular-show"><img src="assets/showhome.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/breaking-bad"><img src="assets/bbhome.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x">
-							<a href="/adventure-time"><img src="assets/finnhome.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/loki"><img src="assets/lokiW.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/regular-show"><img src="assets/showhome.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/the-garfield's-show"><img src="assets/garfield.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/regular-show"><img src="assets/showhome.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x">
-							<a href="/adventure-time"><img src="assets/finnhome.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/the-garfield's-show"><img src="assets/garfield.webp" alt="si"></a>
-						</div>
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/breaking-bad"><img src="assets/bbhome.webp" alt="si"></a>
-						</div>
-						
-						<div class="pelicula peliculaAll pelicula-x ">
-							<a href="/loki"><img src="assets/lokiW.webp" alt="si"></a>
-						</div>
-						
-						
-					</div>
-				</div>
-				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
-			</div>
-		</div>
-		  <!--peliculas-->
-        <div class="peliculas-recomendadas contenedor">
-			<div class="contenedor-titulo-controles">
-				<h3 id="peliculas">Peliculas</h3>
-				<div class="indicadores indicadores2">
-				</div>
-			</div>
-			<div class="contenedor-principal">
-				<button role="button" id="flecha-izquierda2" class="flecha-izquierda-y"><i class="fa-solid fa-angle-left"></i></button>
-				<div class="contenedor-carrusel  contenedor-carrusel2">
-					<div class="carrusel carrusely">
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/matrix"><img src="assets/matrixV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/xmen"><img src="assets/xmenV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/piratas-del-caribe"><img src="assets/piratasV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/ready-player-one"><img src="assets/readyV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/interestelar"><img src="assets/interV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/xmen"><img src="assets/xmenV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/piratas-del-caribe"><img src="assets/piratasV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/interestelar"><img src="assets/interV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/matrix"><img src="assets/matrixV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/ready-player-one"><img src="assets/readyV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/ready-player-one"><img src="assets/readyV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/interestelar"><img src="assets/interV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/xmen"><img src="assets/xmenV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/matrix"><img src="assets/matrixV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula2  peliculaAll pelicula-y">
-							<a href="/piratas-del-caribe"><img src="assets/piratasV.webp" alt="si"></a>
-						</div>
-						
-						
-						
-						
-						
-					</div>
-				</div>
-				<button role="button" id="flecha-derecha2" class="flecha-derecha-y"><i class="fa-solid fa-angle-right"></i></button>
-			</div>
-		</div>
-		  <!--recientes-->
-        <div class="peliculas-recomendadas contenedor">
-			<div class="contenedor-titulo-controles">
-				<h3>Añadidas Recientemente</h3>
-				<div class="indicadores indicadores3">
-				</div>
-			</div>
-			<div class="contenedor-principal">
-				<button role="button" id="flecha-izquierda3" class="flecha-izquierda-y"><i class="fa-solid fa-angle-left"></i></button>
-				<div class="contenedor-carrusel contenedor-carrusel3 ">
-					<div class="carrusel">
-						<div class="pelicula3  peliculaAll pelicula-y">
-							<a href="/ready-player-one"><img src="assets/readyV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula3  peliculaAll pelicula-y">
-							<a href="/loki"><img src="assets/lokiV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula3  peliculaAll pelicula-y">
-							<a href="/interestelar"><img src="assets/interV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula3  peliculaAll pelicula-y">
-							<a href="/breaking-bad"><img src="assets/bbV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula3  peliculaAll pelicula-y">
-							<a href="/piratas-del-caribe"><img src="assets/piratasV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula3  peliculaAll pelicula-y">
-							<a href="/xmen"><img src="assets/xmenV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula3  peliculaAll pelicula-y">
-							<a href="/adventure-time"><img src="assets/finnV.webp" alt="si"></a>
-						</div>
-						<div class="pelicula3  peliculaAll pelicula-y ">
-							<a href="/regular-show"><img class="acomodar" src="assets/show+V.webp" alt="si"></a>
-						</div>
-						<div class="pelicula3 espacio-blanco">
-							<a href="#"></a>
-						</div>
-						<div class="pelicula3  espacio-blanco">
-							<a href="#"></a>
-						</div>
-						
-						
-					</div>
-				</div>
-				<button role="button" id="flecha-derecha3" class="flecha-derecha-y"><i class="fa-solid fa-angle-right"></i></button>
-			</div>
-		</div>
-		 <!--pronto-->
-        <div class="peliculas-recomendadas contenedor">
-			<div class="contenedor-titulo-controles">
-				<h3>Proximamente en Neu</h3>
-				<div class="indicadores">
-				</div>
-			</div>
-			<div class="contenedor-principal">
-				<div class="contenedor-carrusel contenedor-carrusel4 ">
-					<div class="carrusel">
-						<div class="pelicula4  peliculaAll pelicula-y">
-							<a href="#"><img src="assets/img1.webp" alt="si"></a>
-						</div>
-						<div class="pelicula4  peliculaAll pelicula-y">
-							<a href="#"><img src="assets/img1.webp" alt="si"></a>
-						</div>
-						<div class="pelicula4  peliculaAll pelicula-y">
-							<a href="#"><img src="assets/img1.webp" alt="si"></a>
-						</div>
-						<div class="pelicula4  espacio-blanco">
-							<a href="#"></a>
-						</div>
-						<div class="pelicula4  espacio-blanco">
-							<a href="#"></a>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-		 <!--Documentales-->
-        <div class="peliculas-recomendadas contenedor">
-			<div class="contenedor-titulo-controles">
-				<h3 id="documentales">Documentales apasionantes</h3>
-				<div class="indicadores indicadores5">
-				</div>
-			</div>
-			<div class="contenedor-principal">
-				<button role="button" id="flecha-izquierda5" class="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
-				<div class="contenedor-carrusel contenedor-carrusel5 ">
-					<div class="carrusel">
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/1.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/2.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/3.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/4.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/5.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/1.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/2.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/3.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/4.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/5.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/1.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/2.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/3.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/4.png" alt="si"></a>
-						</div>
-						<div class="pelicula5  peliculaAll pelicula-x">
-							<a href="#"><img src="assets/5.png" alt="si"></a>
-						</div>
 
-						
-						
+		</nav>
+
+	</header>
+	<div class="efectoShadow" id="shadow">
+
+	</div>
+	<div class="trigger" id="trigger" onmouseover="hover();">
+		<div class="flecha flechaanimation" id="flecha">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="#fff"
+				class="flechasvg"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+				<path
+					d="M280.4 148.3L96 300.1V464a16 16 0 0 0 16 16l112.1-.3a16 16 0 0 0 15.9-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.6a16 16 0 0 0 16 16.1L464 480a16 16 0 0 0 16-16V300L295.7 148.3a12.2 12.2 0 0 0 -15.3 0zM571.6 251.5L488 182.6V44.1a12 12 0 0 0 -12-12h-56a12 12 0 0 0 -12 12v72.6L318.5 43a48 48 0 0 0 -61 0L4.3 251.5a12 12 0 0 0 -1.6 16.9l25.5 31A12 12 0 0 0 45.2 301l235.2-193.7a12.2 12.2 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0 -1.7-16.9z" />
+			</svg>
+		</div>
+	</div>
+	<!--fin del Nav bar-->
+	<main>
+		<!--carrusel-->
+		<div class="slider-box">
+			<div class="slider-botones">
+				<button role="button" id="flecha-iH" class="flechaImg1"><i
+					class="fa-solid fa-angle-left"></i></button>
+				<div class="botones-item">
+				</div>
+				<button role="button" id="flecha-dH" class="flechaImg2"><i
+					class="fa-solid fa-angle-right"></i></button>
+
+			</div>
+			<div class="contenedor-imagenes">
+				<div class="ul">
+					<div class="img1 li boton-inicio">
+						<div class="oscurecer"></div>
+						<a href="/loki" aria-label="boton-Reproducir" class="linkR"></a>
+
+						<div class="texto ">
+							<h2>Loki</h2>
+							<p>Loki es llevado ante la misteriosa organización llamada Autoridad de Variación Temporal
+								después de robar el Cubo Cósmico durante los eventos de 'Avengers: Endgame' (2019) y se
+								le da a elegir entre enfrentarse a la eliminación de la realidad o ayudar contra una
+								amenaza mayor,​ por lo cual Loki termina viajando a través del tiempo, alterando la
+								historia humana.</p>
+							<a href="" aria-label="boton Reproducir" class="botonesMain"> <i
+									class="fa-solid fa-play"></i> Reproducir</a>
+							<a href="/loki" aria-label="boton-mas" class="botonesMain"><i
+									class="fa-solid fa-circle-info"></i> Mas Informacion</a>
+						</div>
+					</div>
+					<div class="img2 li boton-inicio">
+						<div class="oscurecer"></div>
+						<a href="/regular-show" aria-label="boton-Reproducir" class="linkR"></a>
+						<div class="texto">
+							<h2>Regular Show</h2>
+							<p>La serie que trata sobre una pareja de alocados amigos, un mapache llamado Rigby y un
+								pájaro azul llamado Mordecai. Los dos son jardineros en un parque propiedad de Pops, una
+								paleta de aspecto humanoide. El problema que tienen estos personajes es que el trabajo
+								que hacen es tan duro que lo intentarán evitar de todas las maneras posibles.</p>
+							<a href="" aria-label="boton Reproducir" class="botonesMain"> <i
+									class="fa-solid fa-play"></i> Reproducir</a>
+							<a href="/regular-show" aria-label="boton-mas" class="botonesMain"><i
+									class="fa-solid fa-circle-info"></i> Mas Informacion</a>
+						</div>
+					</div>
+					<div class="img3 li boton-inicio">
+						<div class="oscurecer"></div>
+						<a href="/breaking-bad" aria-label="boton-Reproducir" class="linkR"></a>
+						<div class="texto">
+							<h2>Breaking Bad</h2>
+							<p>Un profesor de Química de secundaria con cáncer terminal se asocia a un exestudiante para
+								asegurar el futuro de su familia al fabricar y vender metanfetamina.</p>
+							<a href="" aria-label="boton Reproducir" class="botonesMain"> <i
+									class="fa-solid fa-play"></i> Reproducir</a>
+							<a href="/breaking-bad" aria-label="boton-mas" class="botonesMain"><i
+									class="fa-solid fa-circle-info"></i> Mas Informacion</a>
+						</div>
+					</div>
+					<div class="img4 li boton-inicio">
+						<div class="oscurecer"></div>
+						<a href="/interestelar" aria-label="boton-Reproducir" class="linkR"></a>
+						<div class="texto">
+							<h2>interestelar</h2>
+							<p>Un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje
+								espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la
+								Tierra y comenzar una nueva vida allí. La Tierra está llegando a su fin y este grupo
+								necesita encontrar un planeta más allá de nuestra galaxia que garantice el futuro de la
+								raza humana.</p>
+							<a href="" aria-label="boton Reproducir" class="botonesMain"> <i
+									class="fa-solid fa-play"></i> Reproducir</a>
+							<a href="/interestelar" aria-label="boton-mas" class="botonesMain"><i
+									class="fa-solid fa-circle-info"></i> Mas Informacion</a>
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+
+		</div>
+		<!--fin carrusel-->
+		<div class="page">
+			<!--series-->
+			<div class="peliculas-recomendadas contenedor">
+				<div class="contenedor-titulo-controles">
+					<h3 id="series">Neu Series</h3>
+					<div class="indicadores indicadores1">
 					</div>
 				</div>
-				<button role="button" id="flecha-derecha5" class="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
+				<div class="contenedor-principal">
+					<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i
+							class="fa-solid fa-angle-left"></i></button>
+					<div class="contenedor-carrusel">
+						<div class="carrusel">
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/the-garfield's-show"><img src="assets/garfield.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/loki"><img src="assets/lokiW.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/regular-show"><img src="assets/showhome.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/breaking-bad"><img src="assets/bbhome.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x">
+								<a href="/adventure-time"><img src="assets/finnhome.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/loki"><img src="assets/lokiW.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x">
+								<a href="/adventure-time"><img src="assets/finnhome.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/the-garfield's-show"><img src="assets/garfield.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/breaking-bad"><img src="assets/bbhome.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/regular-show"><img src="assets/showhome.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/breaking-bad"><img src="assets/bbhome.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x">
+								<a href="/adventure-time"><img src="assets/finnhome.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/loki"><img src="assets/lokiW.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/regular-show"><img src="assets/showhome.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/the-garfield's-show"><img src="assets/garfield.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/regular-show"><img src="assets/showhome.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x">
+								<a href="/adventure-time"><img src="assets/finnhome.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/the-garfield's-show"><img src="assets/garfield.webp" alt="si"></a>
+							</div>
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/breaking-bad"><img src="assets/bbhome.webp" alt="si"></a>
+							</div>
+
+							<div class="pelicula peliculaAll pelicula-x ">
+								<a href="/loki"><img src="assets/lokiW.webp" alt="si"></a>
+							</div>
+
+
+						</div>
+					</div>
+					<button role="button" id="flecha-derecha" class="flecha-derecha"><i
+							class="fa-solid fa-angle-right"></i></button>
+				</div>
+			</div>
+			<!--peliculas-->
+			<div class="peliculas-recomendadas contenedor">
+				<div class="contenedor-titulo-controles">
+					<h3 id="peliculas">Peliculas</h3>
+					<div class="indicadores indicadores2">
+					</div>
+				</div>
+				<div class="contenedor-principal">
+					<button role="button" id="flecha-izquierda2" class="flecha-izquierda-y"><i
+							class="fa-solid fa-angle-left"></i></button>
+					<div class="contenedor-carrusel  contenedor-carrusel2">
+						<div class="carrusel carrusely">
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/matrix"><img src="assets/matrixV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/xmen"><img src="assets/xmenV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/piratas-del-caribe"><img src="assets/piratasV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/ready-player-one"><img src="assets/readyV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/interestelar"><img src="assets/interV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/xmen"><img src="assets/xmenV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/piratas-del-caribe"><img src="assets/piratasV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/interestelar"><img src="assets/interV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/matrix"><img src="assets/matrixV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/ready-player-one"><img src="assets/readyV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/ready-player-one"><img src="assets/readyV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/interestelar"><img src="assets/interV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/xmen"><img src="assets/xmenV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/matrix"><img src="assets/matrixV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula2  peliculaAll pelicula-y">
+								<a href="/piratas-del-caribe"><img src="assets/piratasV.webp" alt="si"></a>
+							</div>
+
+
+
+
+
+						</div>
+					</div>
+					<button role="button" id="flecha-derecha2" class="flecha-derecha-y"><i
+							class="fa-solid fa-angle-right"></i></button>
+				</div>
+			</div>
+			<!--recientes-->
+			<div class="peliculas-recomendadas contenedor">
+				<div class="contenedor-titulo-controles">
+					<h3>Añadidas Recientemente</h3>
+					<div class="indicadores indicadores3">
+					</div>
+				</div>
+				<div class="contenedor-principal">
+					<button role="button" id="flecha-izquierda3" class="flecha-izquierda-y"><i
+							class="fa-solid fa-angle-left"></i></button>
+					<div class="contenedor-carrusel contenedor-carrusel3 ">
+						<div class="carrusel">
+							<div class="pelicula3  peliculaAll pelicula-y">
+								<a href="/ready-player-one"><img src="assets/readyV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula3  peliculaAll pelicula-y">
+								<a href="/loki"><img src="assets/lokiV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula3  peliculaAll pelicula-y">
+								<a href="/interestelar"><img src="assets/interV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula3  peliculaAll pelicula-y">
+								<a href="/breaking-bad"><img src="assets/bbV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula3  peliculaAll pelicula-y">
+								<a href="/piratas-del-caribe"><img src="assets/piratasV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula3  peliculaAll pelicula-y">
+								<a href="/xmen"><img src="assets/xmenV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula3  peliculaAll pelicula-y">
+								<a href="/adventure-time"><img src="assets/finnV.webp" alt="si"></a>
+							</div>
+							<div class="pelicula3  peliculaAll pelicula-y ">
+								<a href="/regular-show"><img class="acomodar" src="assets/show+V.webp" alt="si"></a>
+							</div>
+							<div class="pelicula3 espacio-blanco">
+								<a href="#"></a>
+							</div>
+							<div class="pelicula3  espacio-blanco">
+								<a href="#"></a>
+							</div>
+
+
+						</div>
+					</div>
+					<button role="button" id="flecha-derecha3" class="flecha-derecha-y"><i
+							class="fa-solid fa-angle-right"></i></button>
+				</div>
+			</div>
+			<!--pronto-->
+			<div class="peliculas-recomendadas contenedor">
+				<div class="contenedor-titulo-controles">
+					<h3>Proximamente en Neu</h3>
+					<div class="indicadores">
+					</div>
+				</div>
+				<div class="contenedor-principal">
+					<div class="contenedor-carrusel contenedor-carrusel4 ">
+						<div class="carrusel">
+							<div class="pelicula4  peliculaAll pelicula-y">
+								<a href="#"><img src="assets/img1.webp" alt="si"></a>
+							</div>
+							<div class="pelicula4  peliculaAll pelicula-y">
+								<a href="#"><img src="assets/img1.webp" alt="si"></a>
+							</div>
+							<div class="pelicula4  peliculaAll pelicula-y">
+								<a href="#"><img src="assets/img1.webp" alt="si"></a>
+							</div>
+							<div class="pelicula4  espacio-blanco">
+								<a href="#"></a>
+							</div>
+							<div class="pelicula4  espacio-blanco">
+								<a href="#"></a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Documentales-->
+			<div class="peliculas-recomendadas contenedor">
+				<div class="contenedor-titulo-controles">
+					<h3 id="documentales">Documentales apasionantes</h3>
+					<div class="indicadores indicadores5">
+					</div>
+				</div>
+				<div class="contenedor-principal">
+					<button role="button" id="flecha-izquierda5" class="flecha-izquierda"><i
+							class="fa-solid fa-angle-left"></i></button>
+					<div class="contenedor-carrusel contenedor-carrusel5 ">
+						<div class="carrusel">
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/1.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/2.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/3.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/4.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/5.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/1.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/2.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/3.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/4.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/5.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/1.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/2.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/3.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/4.png" alt="si"></a>
+							</div>
+							<div class="pelicula5  peliculaAll pelicula-x">
+								<a href="#"><img src="assets/5.png" alt="si"></a>
+							</div>
+
+
+
+						</div>
+					</div>
+					<button role="button" id="flecha-derecha5" class="flecha-derecha"><i
+							class="fa-solid fa-angle-right"></i></button>
+				</div>
 			</div>
 		</div>
-    </div>
-    </main>
+	</main>
 	<footer>
 		<div class="footer-content">
 			<div class="contentText">
 				<p>© 2024. NeU Movies. Reservados todos los derechos.</p>
-				<p>El nombre y el logotipo de NeU Movies, así como todos los programas y sus títulos y logotipos son marcas y propiedad de Neü Movies, sus afiliados y/o sus licenciatarios.</p>
+				<p>El nombre y el logotipo de NeU Movies, así como todos los programas y sus títulos y logotipos son
+					marcas y propiedad de Neü Movies, sus afiliados y/o sus licenciatarios.</p>
 			</div>
-			
+
 			<div class="social-icons">
 				<a href="https://www.instagram.com/sirf35_99/"><i class="fa-brands fa-instagram"></i></a>
 				<a href="https://www.tiktok.com/@shamfr_99"><i class="fa-brands fa-tiktok"></i></a>
-				<a href="https://www.youtube.com/channel/UCVIyWb9Bnzxvey3fnzIQ4UA"><i class="fa-brands fa-youtube"></i></a>
+				<a href="https://www.youtube.com/channel/UCVIyWb9Bnzxvey3fnzIQ4UA"><i
+						class="fa-brands fa-youtube"></i></a>
 				<a href="https://www.twitch.tv/deeplmon"><i class="fa-brands fa-twitch"></i></a>
 				<a href="https://github.com/DeepLmon-git"><i class="fa-brands fa-github"></i></a>
 			</div>
-			
-			
+
+
 		</div>
 		<ul class="footer-links">
 			<li><a href="#">Política de privacidad</a></li>
 			<li><a href="#">Términos de uso</a></li>
 			<li><a href="#">Configuración de Cookies</a></li>
 			<li><a href="#">Especificaciones de anuncios</a></li>
-			<li><a href="#">Centro de ayuda</a></li>
+			<li><a href="#">Contacto</a></li>
 		</ul>
 	</footer>
 
