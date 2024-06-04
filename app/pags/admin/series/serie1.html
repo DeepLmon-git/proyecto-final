@@ -102,38 +102,36 @@
 
 <body>
     <!--Nav bar-->
-    <header class="header" id="header" onmouseleave="disapear();">
-        <button type="button" class="cerrar"><i class="fa-solid fa-xmark"></i></button>
+	<div class="navR">
+		<a href="/home" aria-label="si"><img src="assets/logo final.svg" alt="si"></a>
+		<button role="button" class="botonMenu" onclick="hover()"><i class="fa-solid fa-ellipsis"></i></button>
+	</div>
+    <header class="header" id="header" >
+
+		
+		<button type="button" class="cerrar"><i class="fa-solid fa-xmark"></i></button>
         <nav class="nav" id="nav">
             <ul class="ul" id="ul">
-                <button class="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg"
-                        viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                    </svg>
-                </button>
 
                 <li><a href="/home" class="a">Home</a></li>
-                <li><a href="/home" class="a">Series</a></li>
-                <li><a href="" class="a">peliculas</a></li>
-                <li><a href="" class="a">Documentales</a></li>
+                <li><a href="#series" class="a">Series</a></li>
+                <li><a href="#peliculas" class="a">peliculas</a></li>
+                <li><a href="#documentales" class="a">Documentales</a></li>
             </ul>
-            <div class="userContent">
-                <button class="user" id="user" role="button"><i class="fa-solid fa-user"></i></button>
-                <div class="user-options">
-                    <ul class="userUl" id="userUl">
-                        <li>User</li>
-                        <li>E-mail</li>
-                        <li><button role="button" id="userBtn"><span>Sing Out <i
-                                        class="fa-solid fa-right-from-bracket"></i></span></button></li>
-                    </ul>
-                </div>
-
-            </div>
-
+			<div class="userContent">
+				<button class="user" role="button"><i class="fa-solid fa-user"></i></button>
+				<div class="user-options">
+					<ul class="userUl">
+						<li>User</li>
+						<li>E-mail</li>
+						<li><button role="button" id="userBtn"><span>Sing Out <i class="fa-solid fa-right-from-bracket"></i></span></button></li>
+					</ul>
+				</div>
+				
+			</div>
+			
         </nav>
-
+		
     </header>
     <div class="efectoShadow" id="shadow">
 
