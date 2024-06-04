@@ -41,7 +41,33 @@ window.addEventListener("DOMContentLoaded", (event) => {
         shadow.classList.remove("efectoShadow2");
         listaUsuario.classList.remove('desplegado')
     });
+    const botonNav = document.querySelector(".navR");
+
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY == -1) {
+            
+            
+        } else {
+
+            botonNav.classList.toggle('mostrarNav', window.scrollY > 1);
+            
+        }
+        
+
+
+
+    })
+   
+       
+       
+
+
+
+    
+    
 })
+
 
 
 const trigger = document.getElementById('trigger');

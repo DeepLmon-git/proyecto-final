@@ -17,24 +17,28 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
+
         .recomendados .card.img1 {
-            background-image: url(assets/lokiV.webp);
-            background-size: cover;
-        }
-        .recomendados .card.img2 {
             background-image: url(assets/show+V.webp);
             background-size: cover;
         }
+
+        .recomendados .card.img2 {
+            background-image: url(assets/lokiV.webp);
+            background-size: cover;
+        }
+
         .recomendados .card.img3 {
             background-image: url(assets/bbV.webp);
             background-size: cover;
         }
+
         .recomendados .card.img4 {
-            background-image: url(assets/finnV.webp);
+            background-image: url(assets/xmenV.webp);
             background-size: cover;
         }
 
-      
+
 
         @media screen and (max-width:1282px) {
             .mainImg-bg {
@@ -59,7 +63,7 @@
             .mainImg {
                 height: 900px;
             }
-            
+
 
             .mainImg-bg {
                 background-image: url(assets/piratas-bg.webp);
@@ -86,12 +90,13 @@
                 background-position-x: -140px;
             }
 
-            .episodios {
-                top: -100px;
-            }
 
             .recomendados {
-                top: -100px;
+                top: -80px;
+            }
+
+            .mainImg .infoSerie p {
+                width: 360px;
             }
         }
     </style>
@@ -99,7 +104,7 @@
 
 <body>
     <!--Nav bar-->
-    <header class="header" id="header" >
+    <header class="header" id="header">
         <button type="button" class="cerrar"><i class="fa-solid fa-xmark"></i></button>
         <nav class="nav" id="nav">
             <ul class="ul" id="ul">
@@ -155,11 +160,13 @@
                 <ul>
                     <li>2h 23m</li>
                     <li><i class="fa-solid fa-circle"></i></li>
-                    <li>  Aventura/Acción </li>
+                    <li> Aventura/Acción </li>
                     <li><i class="fa-solid fa-circle"></i></li>
                     <li> 2003</li>
                 </ul>
-                <p>El capitán Barbossa le roba el barco al pirata Jack Sparrow y secuestra a Elizabeth, amiga de Will Turner. Barbossa y su tripulación son víctimas de un conjuro que los condena a vivir eternamente y a transformarse cada noche en esqueletos vivientes.</p>
+                <p>El capitán Barbossa le roba el barco al pirata Jack Sparrow y secuestra a Elizabeth, amiga de Will
+                    Turner. Barbossa y su tripulación son víctimas de un conjuro que los condena a vivir eternamente y a
+                    transformarse cada noche en esqueletos vivientes.</p>
 
                 <a href="#"><i class="fa-solid fa-play"></i> Ver ahora</a>
 
@@ -181,7 +188,7 @@
 
                         <div class="card__body">
                         </div>
-                        <span><a href="/loki">Ver ahora <i class="fa-solid fa-play"></i></a>
+                        <span><a href="/regular-show">Ver ahora <i class="fa-solid fa-play"></i></a>
                         </span>
                     </div>
                 </li>
@@ -194,7 +201,7 @@
 
                         <div class="card__body">
                         </div>
-                        <span><a href="/regular-show">Ver ahora <i class="fa-solid fa-play"></i></a>
+                        <span><a href="/loki">Ver ahora <i class="fa-solid fa-play"></i></a>
                         </span>
                     </div>
                 </li>
@@ -220,36 +227,11 @@
 
                         <div class="card__body">
                         </div>
-                        <span><a href="/adventure-time">Ver ahora <i class="fa-solid fa-play"></i></a>
+                        <span><a href="/xmen">Ver ahora <i class="fa-solid fa-play"></i></a>
                         </span>
                     </div>
                 </li>
                 <!--Card 1-->
-                <li>
-                    <div class="card img5">
-
-                        <div class="icon">
-                        </div>
-
-                        <div class="card__body">
-                        </div>
-                        <span><a href="#">Ver ahora <i class="fa-solid fa-play"></i></a>
-                        </span>
-                    </div>
-                </li>
-                <!--Card 1-->
-                <li>
-                    <div class="card img6">
-
-                        <div class="icon">
-                        </div>
-
-                        <div class="card__body">
-                        </div>
-                        <span><a href="#">Ver ahora <i class="fa-solid fa-play"></i></a>
-                        </span>
-                    </div>
-                </li>
 
             </ul>
         </section>

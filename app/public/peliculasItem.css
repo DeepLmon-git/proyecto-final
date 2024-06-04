@@ -549,5 +549,8 @@ body::-webkit-scrollbar {
     .mainImg a {
         padding: 14px 25%;
     }
+    .mainImg .infoSerie p {
+        width: 360px;
+    }
     
 }
