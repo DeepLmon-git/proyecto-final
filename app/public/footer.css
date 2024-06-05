@@ -52,7 +52,8 @@ footer {
 .footer-links {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 100%;
     padding: 0;
     margin-right: 20px;
     
@@ -89,8 +90,10 @@ footer {
     font-size: 0.7em;
   }
   .footer-links{
+    margin-left: 20px;
     flex-direction: column;
     text-align: left;
+    justify-content: space-between;
   }
   .footer-links li {
     margin: 5px 0;
