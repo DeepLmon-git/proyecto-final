@@ -108,8 +108,9 @@ td{
 }
 
 
-
-
+.pack-container{
+  display: none;
+}
 
 /* ? -----------------media querys -------------------------*/
 
@@ -279,10 +280,4 @@ td{
     text-align: center;
   }
 
-
-
-
-
-
- 
 }
