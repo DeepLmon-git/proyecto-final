@@ -44,6 +44,7 @@ body::-webkit-scrollbar {
     height: 80vh;
 
     scroll-behavior: smooth;
+    
 
 }
 
@@ -87,6 +88,7 @@ body::-webkit-scrollbar {
     z-index: 5;
     top: 250px;
     color: var(--text-color);
+    animation: slideInDown 2s forwards;
 
 }
 
@@ -239,6 +241,9 @@ body::-webkit-scrollbar {
 .contenedor {
     width: 85%;
     margin: auto;
+}
+.peliculas-recomendadas{
+    animation: slideInUp 2s forwards;
 }
 
 /* ---- ----- ----- Contenedor titulo y controles ----- ----- ----- */
@@ -439,6 +444,29 @@ body::-webkit-scrollbar {
     background-image: url(assets/interW.webp);
     background-size: cover;
 }
+@keyframes slideInDown {
+    0% {
+      transform: translateY(-30%);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInUp {
+    0% {
+      transform: translateY(20%);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
 
 

@@ -1,107 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> The Matrix</title>
+    <title>Series</title>
     <link rel="stylesheet" href="NavBar.css">
-    <link rel="stylesheet" href="peliculasItem.css">
+    <link rel="stylesheet" href="peliculas.css">
     <link rel="stylesheet" href="footer.css">
-    <script src="peliculasItem.js"></script>
     <script src="https://kit.fontawesome.com/582d0fbc48.js" crossorigin="anonymous"></script>
     <script src="Navbar.js"></script>
-    <style>
-        .mainImg-bg {
-            background-image: url(assets/matrix-bg.webp);
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        .recomendados .card.img1 {
-            background-image: url(assets/lokiV.webp);
-            background-size: cover;
-        }
-        .recomendados .card.img2 {
-            background-image: url(assets/xmenV.webp);
-            background-size: cover;
-        }
-        .recomendados .card.img3 {
-            background-image: url(assets/bbV.webp);
-            background-size: cover;
-        }
-        .recomendados .card.img4 {
-            background-image: url(assets/piratasV.webp);
-            background-size: cover;
-        }
-        .recomendados .card.img5 {
-            background-image: url(assets/interV.webp);
-            background-size: cover;
-        }
-        
-
-      
-
-        @media screen and (max-width:1282px) {
-            .mainImg-bg {
-                background-image: url(assets/matrix-bg.webp);
-                background-size: 1300px;
-            }
-        }
-
-        @media screen and (max-width:925px) {
-            .mainImg {
-                height: 700px;
-            }
-
-            .mainImg-bg {
-                background-image: url(assets/matrix-bg.webp);
-                background-size: 950px;
-                background-repeat: no-repeat;
-            }
-        }
-
-        @media screen and (max-width:726px) {
-            .mainImg {
-                height: 900px;
-            }
-            
-
-            .mainImg-bg {
-                background-image: url(assets/matrix-bg.webp);
-                background-size: 950px;
-                background-repeat: no-repeat;
-                background-position-x: -280px;
-            }
-        }
-
-        @media screen and (max-width:400px) {
-            .mainImg {
-                height: 800px;
-            }
-
-            .responsiveImg {
-                height: 300px;
-                width: 100%;
-            }
-
-            .mainImg-bg {
-                background-image: url(assets/matrix-bg.webp);
-                background-size: 600px;
-                background-repeat: no-repeat;
-                background-position-x: -140px;
-            }
-
-            .episodios {
-                top: -100px;
-            }
-
-            .recomendados {
-                top: -100px;
-            }
-        }
-    </style>
 </head>
-
 <body>
     <!--Nav bar-->
 	<div class="navR">
@@ -151,29 +59,14 @@
     <main>
         <!-- ?---------- Main image ---------------->
 
-        <section class="mainImg mainImg-bg">
-            <div class="responsiveImg"></div>
-            <div class="infoSerie">
-                <h1>The Matrix</h1>
-                <ul>
-                    <li>2h 16m</li>
-                    <li><i class="fa-solid fa-circle"></i></li>
-                    <li>  Acción/Ciencia ficción </li>
-                    <li><i class="fa-solid fa-circle"></i></li>
-                    <li> 1999</li>
-                </ul>
-                <p>El programador informático Thomas Anderson, más conocido en el mundo de los "hacker" como Neo, está en el punto de mira del temible agente Smith. Otros dos piratas informáticos, Trinity y Morfeo, se ponen en contacto con Neo para ayudarlo a escapar. Matrix te posee. Sigue al conejo blanco.</p>
-
-                <a href="#"><i class="fa-solid fa-play"></i> Ver ahora</a>
-
-
+        <section class="mainImg ">
+            <div class="mainImg-bg">
+                <h1>Peliculas</h1>
             </div>
-            <div class="botones">
-                <button type="button" class="botonE activo" id="botonR"> Recomendados </button>
-            </div>
-
+            <img src="assets/series.webp" alt="series">
+            
         </section>
-        <section class="recomendados visible3">
+        <section class="episodios">
             <ul>
                 <!--Card 1-->
                 <li>
@@ -184,11 +77,11 @@
 
                         <div class="card__body">
                         </div>
-                        <span><a href="/loki">Ver ahora <i class="fa-solid fa-play"></i></a>
+                        <span><a href="/xmen">Reproducir <i class="fa-solid fa-play"></i></a>
                         </span>
                     </div>
+                    
                 </li>
-                <!--Card 1-->
                 <li>
                     <div class="card img2">
 
@@ -197,11 +90,11 @@
 
                         <div class="card__body">
                         </div>
-                        <span><a href="/xmen">Ver ahora <i class="fa-solid fa-play"></i></a>
+                        <span><a href="/piratas-del-caribe">Reproducir <i class="fa-solid fa-play"></i></a>
                         </span>
                     </div>
+                    
                 </li>
-                <!--Card 1-->
                 <li>
                     <div class="card img3">
 
@@ -210,11 +103,11 @@
 
                         <div class="card__body">
                         </div>
-                        <span><a href="/breaking-bad">Ver ahora <i class="fa-solid fa-play"></i></a>
+                        <span><a href="/interestelar">Reproducir <i class="fa-solid fa-play"></i></a>
                         </span>
                     </div>
+                    
                 </li>
-                <!--Card 1-->
                 <li>
                     <div class="card img4">
 
@@ -223,11 +116,11 @@
 
                         <div class="card__body">
                         </div>
-                        <span><a href="/piratas-del-caribe">Ver ahora <i class="fa-solid fa-play"></i></a>
+                        <span><a href="/matrix">Reproducir <i class="fa-solid fa-play"></i></a>
                         </span>
                     </div>
+                    
                 </li>
-                <!--Card 1-->
                 <li>
                     <div class="card img5">
 
@@ -236,23 +129,25 @@
 
                         <div class="card__body">
                         </div>
-                        <span><a href="/interestelar">Ver ahora <i class="fa-solid fa-play"></i></a>
+                        <span><a href="/ready-player-one">Reproducir <i class="fa-solid fa-play"></i></a>
                         </span>
                     </div>
+                    
                 </li>
-                <!--Card 1-->
-                
-
+                    
+                    
+            
             </ul>
+            <h2>Proximamente Mas Contenido</h2>
         </section>
-        <footer class="" id="footer">
+        <footer>
             <div class="footer-content">
                 <div class="contentText">
                     <p>© 2024. NeU Movies. Reservados todos los derechos.</p>
                     <p>El nombre y el logotipo de NeU Movies, así como todos los programas y sus títulos y logotipos son
                         marcas y propiedad de Neü Movies, sus afiliados y/o sus licenciatarios.</p>
                 </div>
-
+    
                 <div class="social-icons">
                     <a href="https://www.instagram.com/sirf35_99/"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.tiktok.com/@shamfr_99"><i class="fa-brands fa-tiktok"></i></a>
@@ -261,8 +156,8 @@
                     <a href="https://www.twitch.tv/deeplmon"><i class="fa-brands fa-twitch"></i></a>
                     <a href="https://github.com/DeepLmon-git"><i class="fa-brands fa-github"></i></a>
                 </div>
-
-
+    
+    
             </div>
             <ul class="footer-links">
                 <li><a href="#">Política de privacidad</a></li>
@@ -273,5 +168,4 @@
         </footer>
     </main>
 </body>
-
 </html>
