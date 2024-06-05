@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Oxygen:wght@300;400;700&family=Ropa+Sans:ital@0;1&display=swap');
+
+:root {
+    --main-color: #9015EC;
+    --second-color: #f23be8;
+    --text-color: #e4e4e4;
+    --second-text-color: none;
+    --other-color1: #010614;
+    --other-color2: #edd854;
+    --other-color3: #c6f9fd;
+    --nav-color: #aeaeae;
+    --rojo: #E50914;
+    --fondo: #141414;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    background-color: var(--other-color1);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+}
+
+.mainImg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+.mainImg img{
+    width: 100%;
+    animation: slideInDown 1s forwards;
+}
+.mainImg-bg{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgb(1, 6, 20);
+    background: linear-gradient(0deg, rgba(1, 6, 20, 1) 18%, rgba(1, 6, 20, 0.9037990196078431) 26%, rgba(1, 6, 20, 0.7301295518207283) 41%, rgba(1, 6, 20, 0.2959558823529411) 67%, rgba(1, 6, 20, 0.9710259103641457) 97%);
+}
+.mainImg h1{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    font-size: 7em;
+    font-weight: 300;
+    animation: slideInUp 2s forwards;
+}
+@keyframes slideInDown {
+    0% {
+      transform: translateY(-30%);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInUp {
+    0% {
+      transform: translateY(70%);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /*  *     episodios   */
+
+
+.episodios .card {
+    --hover-bg: var(--fondo);
+    --hover-text: var(--text-color);
+    width: 374px;
+    height: 240px;
+    text-align: center;
+    padding: 1.5em;
+    padding-block: 1.8em;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s cubic-bezier(.6, .4, 0, 1), transform .15s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 10px;
+}
+.episodios {
+    width: 100%;
+    position: relative;
+    padding: 0 5%;
+    top: -260px;
+    z-index: 7;
+    animation: slideInUp 1.8s forwards;
+}
+
+.episodios ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+}
+
+.episodios li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--text-color);
+
+}
+.episodios h2{
+    font-size: 2.4em;
+    font-weight: 400;
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+
+.card a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+
+.card__body {
+    color: #464853;
+    line-height: 1.5em;
+    font-size: 1em;
+}
+
+.card> :not(span) {
+    transition: .3s cubic-bezier(.6, .4, 0, 1);
+}
+
+.card>strong {
+    display: block;
+    font-size: 1.4rem;
+    letter-spacing: -.035em;
+}
+
+.card span i {
+    margin-left: 10px;
+}
+
+.card span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    color: var(--hover-text);
+    border-radius: 5px;
+    font-weight: bold;
+    top: 100%;
+    transition: all .3s cubic-bezier(.6, .4, 0, 1);
+}
+
+.card:hover span {
+    top: 0;
+    font-size: 1.2em;
+}
+.episodios .card.img1{
+    background-image: url(assets/lokiW.webp);
+    background-size: cover;
+}
+.episodios .card.img2{
+    background-image: url(assets/showW.webp);
+    background-size: cover;
+}
+.episodios .card.img3{
+    background-image: url(assets/garfield.webp);
+    background-size: cover;
+}
+.episodios .card.img4{
+    background-image: url(assets/bbW.webp);
+    background-size: cover;
+}
+.episodios .card.img5{
+    background-image: url(assets/finnhome.webp);
+    background-size: cover;
+}
+
+.episodios .card.img1:hover {
+    background: var(--fondo);
+}
+.episodios .card.img2:hover {
+    background: var(--fondo);
+}
+.episodios .card.img3:hover {
+    background: var(--fondo);
+}
+.episodios .card.img4:hover {
+    background: var(--fondo);
+}
+.episodios .card.img5:hover {
+    background: var(--fondo);
+}
+
+
+.card:hover>div,
+.card:hover>strong {
+    opacity: 0;
+}
+/* *?---- ----- ----- @media querys ----- ----- ----- */
+
+@media screen and (max-width:1740px) {
+    .mainImg{
+        height: 800px;
+    }
+    .episodios ul {
+        grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+    }
+
+}
+@media screen and (max-width:1280px) {
+    .mainImg{
+        height: 800px;
+    }
+    .mainImg h1{
+        font-size: 5em;
+    }
+    .episodios ul {
+        grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+    }
+
+}
+@media screen and (max-width:1080px){
+    .mainImg{
+        height: 600px;
+    }
+    .episodios{
+        top:-170px;
+
+    }
+    .episodios .card{
+        width: 324px;
+        height: 190px;
+    }
+}
+@media screen and (max-width:750px){
+    .mainImg{
+        height: 400px;
+    }
+    .episodios{
+        top:-90px;
+
+    }
+    .episodios .card{
+        width: 244px;
+        height: 110px;
+    }
+    .mainImg h1{
+        font-size: 3.6em;
+    }
+}
+@media screen and (max-width:550px){
+    .mainImg{
+        height: 250px;
+    }
+    .episodios{
+        top:0px;
+
+    }
+    .episodios ul{
+        grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+    }
+    .episodios .card{
+        width: 394px;
+        height: 260px;
+    }
+    .mainImg h1{
+        font-size: 3.6em;
+    }
+}
+@media screen and (max-width:430px){
+    .episodios .card{
+        width: 344px;
+        height: 210px;
+    }
+}
