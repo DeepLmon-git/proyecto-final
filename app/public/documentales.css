@@ -269,6 +269,7 @@ body::-webkit-scrollbar {
         height: 600px;
     }
     .episodios{
+        height: 50vh;
         top:-170px;
 
     }
