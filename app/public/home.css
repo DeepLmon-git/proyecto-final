@@ -597,8 +597,8 @@ body::-webkit-scrollbar {
     }
 
     .slider-box .linkR {
-        width: 80%;
-        margin-inline: 10%;
+        width: 70%;
+        margin-inline: 15%;
         height: 100%;
         z-index: 2;
     }
